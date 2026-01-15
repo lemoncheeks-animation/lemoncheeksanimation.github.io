@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Film, Users, Briefcase, Heart, Instagram, Twitter, Youtube } from 'lucide-react';
+import FloatingSpheres from './FloatingSpheres';
 
 export default function AnimationStudio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -19,13 +20,14 @@ export default function AnimationStudio() {
 
   return (
     <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden">
+      <FloatingSpheres />
       {/* Notebook paper lines background */}
       <div className="fixed inset-0 opacity-20 pointer-events-none" style={{
         backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(150,150,150,0.15) 29px, rgba(150,150,150,0.15) 30px)`
       }}></div>
 
       {/* Navigation */}
-      <nav className="sticky top-0 w-full bg-red-200/60 backdrop-blur-sm z-50" style={{
+      <nav className="fixed top-0 w-full bg-red-200/60 backdrop-blur-sm z-50" style={{
         clipPath: 'polygon(0 0, 2% 1%, 5% 0, 8% 2%, 12% 1%, 15% 0, 18% 1%, 22% 2%, 25% 0, 28% 1%, 32% 2%, 35% 1%, 38% 0, 42% 2%, 45% 1%, 48% 0, 52% 1%, 55% 2%, 58% 0, 62% 1%, 65% 2%, 68% 1%, 72% 0, 75% 2%, 78% 1%, 82% 0, 85% 1%, 88% 2%, 92% 1%, 95% 0, 98% 2%, 100% 1%, 100% 92%, 98% 95%, 96% 93%, 94% 96%, 91% 94%, 88% 97%, 85% 95%, 82% 98%, 78% 96%, 75% 94%, 72% 97%, 68% 95%, 65% 98%, 62% 96%, 58% 94%, 55% 97%, 52% 95%, 48% 98%, 45% 96%, 42% 94%, 38% 97%, 35% 95%, 32% 98%, 28% 96%, 25% 94%, 22% 97%, 18% 95%, 15% 98%, 12% 96%, 8% 94%, 5% 97%, 2% 95%, 0 98%)',
         ...textureStyle
       }}>
@@ -118,7 +120,7 @@ export default function AnimationStudio() {
       </div>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 pb-16 px-4 relative">
+      <section id="home" className="pt-44 pb-16 px-4 relative">
         <div className="max-w-6xl mx-auto text-center relative">
           {/* Artwork placeholder - flying character */}
           <div className="absolute top-0 right-10 w-32 h-32 bg-yellow-100/40 border-2 border-dashed border-yellow-400/50 flex items-center justify-center text-xs text-yellow-600/60" title="Drag character artwork here">
@@ -195,47 +197,36 @@ export default function AnimationStudio() {
             <h2 className="text-4xl font-bold text-pink-900/70 inline-block" style={{
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
-            }}>Meet the Founders</h2>
+            }}>Meet the Team</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Founder 1 */}
-            <div className="bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-8 transform hover:scale-105 transition-transform" style={{
+          <div className="flex justify-center">
+            {/* Team Card */}
+            <div className="bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-8 transform hover:scale-105 transition-transform w-full max-w-lg" style={{
               clipPath: 'polygon(2% 1%, 98% 0%, 100% 3%, 100% 97%, 98% 100%, 1% 99%, 0 96%)',
               ...textureStyle
             }}>
-              {/* Large artwork placeholder for founder photo/illustration */}
-              <div className="w-48 h-48 bg-orange-100/40 border-2 border-dashed border-orange-400/50 mx-auto mb-6 flex flex-col items-center justify-center text-xs text-orange-600/60" style={{
-                clipPath: 'circle(48% at 50% 50%)'
-              }} title="Drag founder artwork here">
-                <span>Founder</span>
-                <span>Portrait</span>
+              {/* Large artwork placeholder with hover effect */}
+              <div className="relative w-64 h-64 mx-auto mb-6 group" title="Drag team photos here">
+                {/* Initial Photo */}
+                <div className="absolute inset-0 bg-orange-100/40 border-2 border-dashed border-orange-400/50 flex flex-col items-center justify-center text-xs text-orange-600/60 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0" style={{
+                  clipPath: 'polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%)'
+                }}>
+                  <span>Team Photo</span>
+                  <span>(Default)</span>
+                </div>
+                {/* Hover Photo */}
+                <div className="absolute inset-0 bg-teal-100/40 border-2 border-dashed border-teal-400/50 flex flex-col items-center justify-center text-xs text-teal-600/60 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" style={{
+                  clipPath: 'polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%)'
+                }}>
+                  <span>Team Photo</span>
+                  <span>(Fun)</span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-center mb-2 text-orange-900/80" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Founder Name</h3>
-              <p className="text-red-500/70 text-center mb-4 font-bold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Role / Title</p>
+              <h3 className="text-2xl font-bold text-center mb-2 text-orange-900/80" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Our Team</h3>
+              <p className="text-red-500/70 text-center mb-4 font-bold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Animators & Storytellers</p>
               <p className="text-orange-800/70 text-center leading-relaxed" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-                A brief description of the founder's background, passion for animation, and what
-                they bring to the studio. Share their journey and what inspires them.
-              </p>
-            </div>
-
-            {/* Founder 2 */}
-            <div className="bg-gradient-to-br from-teal-50/60 to-green-50/60 border-4 border-teal-200/50 shadow-xl p-8 transform hover:scale-105 transition-transform" style={{
-              clipPath: 'polygon(0 2%, 98% 1%, 100% 4%, 100% 98%, 97% 100%, 2% 98%, 0 95%)',
-              ...textureStyle
-            }}>
-              {/* Large artwork placeholder for founder photo/illustration */}
-              <div className="w-48 h-48 bg-teal-100/40 border-2 border-dashed border-teal-400/50 mx-auto mb-6 flex flex-col items-center justify-center text-xs text-teal-600/60" style={{
-                clipPath: 'circle(48% at 50% 50%)'
-              }} title="Drag founder artwork here">
-                <span>Founder</span>
-                <span>Portrait</span>
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-2 text-green-900/80" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Founder Name</h3>
-              <p className="text-teal-600/70 text-center mb-4 font-bold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Role / Title</p>
-              <p className="text-green-800/70 text-center leading-relaxed" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-                A brief description of the founder's background, expertise, and creative vision.
-                Share what drives them and their unique contribution to the team.
+                We are a collective of passionate artists, dreamers, and technicians united by a love for storytelling. Together, we bring imagination to life.
               </p>
             </div>
           </div>
