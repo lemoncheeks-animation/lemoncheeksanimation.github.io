@@ -175,34 +175,37 @@ export default function AnimationStudio() {
             }}>Meet the Team</h2>
           </div>
           
-          <div className="flex justify-center">
-            {/* Team Card */}
-            <div className="bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-8 transform hover:scale-105 transition-transform w-full max-w-lg" style={{
-              clipPath: 'polygon(2% 1%, 98% 0%, 100% 3%, 100% 97%, 98% 100%, 1% 99%, 0 96%)',
-              ...textureStyle
-            }}>
-              {/* Large artwork placeholder with hover effect */}
-              <div className="relative w-64 h-64 mx-auto mb-6 group" title="Drag team photos here">
-                {/* Initial Photo */}
-                <div className="absolute inset-0 bg-orange-100/40 border-2 border-dashed border-orange-400/50 flex flex-col items-center justify-center text-xs text-orange-600/60 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0" style={{
-                  clipPath: 'polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%)'
-                }}>
-                  <span>Team Photo</span>
-                  <span>(Default)</span>
-                </div>
-                {/* Hover Photo */}
-                <div className="absolute inset-0 bg-teal-100/40 border-2 border-dashed border-teal-400/50 flex flex-col items-center justify-center text-xs text-teal-600/60 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" style={{
-                  clipPath: 'polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%)'
-                }}>
-                  <span>Team Photo</span>
-                  <span>(Fun)</span>
+          <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
+            {/* Layer 1 (background paper, slightly rotated) */}
+            <div className="absolute inset-0 bg-yellow-100/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
+            {/* Layer 2 (another background paper, slightly rotated differently) */}
+            <div className="absolute inset-0 bg-pink-100/70 rounded-lg transform rotate-1 shadow-lg z-0" style={textureStyle}></div>
+
+            {/* Main content card */}
+            <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-6 md:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 rounded-lg overflow-hidden z-10" style={textureStyle}>
+              {/* Picture Left */}
+              <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
+                <div className="relative w-64 h-64 border-4 border-dashed border-orange-400/70 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Drag team photos here" style={textureStyle}>
+                  {/* Initial Photo */}
+                  <div className="absolute inset-0 bg-orange-100/40 border-2 border-dashed border-orange-400/50 flex flex-col items-center justify-center text-xs text-orange-600/60 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0">
+                    <span>Team Photo</span>
+                    <span>(Default)</span>
+                  </div>
+                  {/* Hover Photo */}
+                  <div className="absolute inset-0 bg-teal-100/40 border-2 border-dashed border-teal-400/50 flex flex-col items-center justify-center text-xs text-teal-600/60 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+                    <span>Team Photo</span>
+                    <span>(Fun)</span>
+                  </div>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-center mb-2 text-orange-900/80" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Our Team</h3>
-              <p className="text-red-500/70 text-center mb-4 font-bold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Animators & Storytellers</p>
-              <p className="text-orange-800/70 text-center leading-relaxed" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-                We are a collective of passionate artists, dreamers, and technicians united by a love for storytelling. Together, we bring imagination to life.
-              </p>
+              {/* Words Right */}
+              <div className="w-full lg:w-1/2 p-4 bg-blue-50/50 shadow-md transform -rotate-1 rounded-md z-10" style={textureStyle}>
+                <h3 className="text-2xl font-bold text-left mb-2 text-orange-900/80" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Our Team</h3>
+                <p className="text-red-500/70 text-left mb-4 font-bold" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>Animators & Storytellers</p>
+                <p className="text-orange-800/70 text-left leading-relaxed" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                  We are a collective of passionate artists, dreamers, and technicians united by a love for storytelling. Together, we bring imagination to life.
+                </p>
+              </div>
             </div>
           </div>
 
