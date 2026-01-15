@@ -98,9 +98,11 @@ export default function AnimationStudio() {
       <section id="home" className="py-16 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-6xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
-          <div className="absolute inset-0 bg-red-50/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-red-50/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
           {/* Layer 2 (another background paper, slightly rotated differently) */}
-          <div className="absolute inset-0 bg-orange-50/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
+          <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[92%] h-[92%] bg-orange-50/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
+          {/* Layer 3 (new paper layer) */}
+          <div className="absolute top-[20px] left-1/2 -translate-x-1/2 w-[94%] h-[94%] bg-blue-50/70 rounded-lg transform rotate-1 shadow-xl z-0" style={textureStyle}></div>
 
           <div className="relative max-w-6xl mx-auto text-center p-8 md:p-12 rounded-lg shadow-xl z-10" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
             {/* Artwork placeholder - flying character */}
@@ -123,6 +125,10 @@ export default function AnimationStudio() {
             <div className="absolute -bottom-10 left-10 w-24 h-24 bg-pink-100/40 border-2 border-dashed border-pink-400/50 flex items-center justify-center text-xs text-pink-600/60 transform -rotate-8" title="Drag artwork here">
               Doodle
             </div>
+            {/* New doodle placeholder - bottom right */}
+            <div className="absolute -bottom-5 right-5 w-20 h-20 bg-green-100/40 border-2 border-dashed border-green-400/50 flex items-center justify-center text-xs text-green-600/60 transform rotate-12" title="Drag artwork here">
+              Blob
+            </div>
           </div>
         </div>
       </section>
@@ -132,8 +138,12 @@ export default function AnimationStudio() {
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
           <div className="absolute inset-0 bg-green-50/70 rounded-lg transform -rotate-3 shadow-lg z-0" style={textureStyle}></div>
-          {/* Layer 2 (another background paper, slightly rotated differently) */}
-          <div className="absolute inset-0 bg-teal-50/70 rounded-lg transform rotate-2 shadow-lg z-0" style={textureStyle}></div>
+          {/* Layer 3 (new paper layer) */}
+          <div className="absolute inset-0 bg-purple-50/70 rounded-lg transform -rotate-1 shadow-xl z-0" style={textureStyle}></div>
+          {/* New doodle placeholder - top right */}
+          <div className="absolute -top-5 right-5 w-24 h-24 bg-red-100/40 border-2 border-dashed border-red-400/50 flex items-center justify-center text-xs text-red-600/60 transform rotate-6" title="Drag artwork here">
+            Star
+          </div>
 
           <div className="relative bg-gradient-to-br from-green-50/60 to-teal-50/60 shadow-xl p-8 md:p-12 border-4 border-green-200/50 rounded-lg z-10" style={textureStyle}>
             {/* Artwork placeholder - left side character */}
