@@ -94,31 +94,6 @@ export default function AnimationStudio() {
         </div>
       </nav>
 
-      {/* Quick Jump Bar */}
-      <div className="sticky top-16 w-full bg-yellow-200/70 backdrop-blur-sm z-40 py-2 shadow-md" style={{
-        clipPath: 'polygon(0 8%, 3% 2%, 8% 5%, 12% 1%, 18% 4%, 25% 2%, 32% 6%, 38% 3%, 45% 7%, 52% 2%, 58% 5%, 65% 1%, 72% 4%, 78% 7%, 85% 3%, 92% 6%, 97% 2%, 100% 5%, 100% 92%, 97% 98%, 92% 94%, 85% 97%, 78% 93%, 72% 96%, 65% 99%, 58% 95%, 52% 98%, 45% 93%, 38% 97%, 32% 94%, 25% 98%, 18% 96%, 12% 99%, 8% 95%, 3% 98%, 0 92%)',
-        ...textureStyle
-      }}>
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-center items-center gap-2 flex-wrap">
-            <span className="text-sm text-orange-900/70 font-bold mr-2" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Jump to:</span>
-            {['home', 'about', 'founders', 'projects'].map((section) => (
-              <button
-                key={section}
-                onClick={() => scrollToSection(section)}
-                className="text-sm capitalize px-3 py-1 bg-orange-100/60 hover:bg-orange-200/70 text-orange-900/80 font-bold transition-all"
-                style={{
-                  fontFamily: 'Comic Sans MS, cursive',
-                  clipPath: 'polygon(5% 10%, 10% 2%, 90% 5%, 95% 15%, 98% 85%, 90% 98%, 10% 95%, 2% 85%)'
-                }}
-              >
-                {section}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section id="home" className="pt-44 pb-16 px-4 relative">
         <div className="max-w-6xl mx-auto text-center relative">
