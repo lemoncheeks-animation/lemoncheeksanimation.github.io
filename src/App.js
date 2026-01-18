@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Film, Users, Briefcase, Heart, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Menu, X, Film, Heart, Instagram, Twitter, Youtube } from 'lucide-react';
 import FloatingSpheres from './FloatingSpheres';
 import border from './media/border2.jpg';
 import team_photo1 from './media/team_photo1.jpg';
@@ -50,7 +50,7 @@ export default function AnimationStudio() {
                   clipPath: 'polygon(2% 5%, 8% 2%, 15% 4%, 22% 1%, 30% 3%, 38% 1%, 45% 4%, 52% 2%, 60% 5%, 68% 2%, 75% 4%, 82% 1%, 90% 3%, 95% 6%, 98% 12%, 99% 20%, 98% 28%, 100% 35%, 99% 43%, 98% 50%, 100% 58%, 99% 65%, 98% 72%, 100% 80%, 98% 88%, 95% 94%, 90% 97%, 82% 99%, 75% 96%, 68% 98%, 60% 95%, 52% 98%, 45% 96%, 38% 99%, 30% 97%, 22% 99%, 15% 96%, 8% 98%, 2% 95%)',
                   border: '2px dashed rgba(251, 146, 60, 0.5)'
                 }} />
-              <span className="text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks</span>
+              <span className="text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks animation cooperative</span>
 
             </div>
 
@@ -310,15 +310,15 @@ export default function AnimationStudio() {
         <div className="flex justify-center relative z-10 w-full max-w-6xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
           <div className="absolute inset-0 bg-yellow-50/70 rounded-lg transform -rotate-1 shadow-lg z-0" style={textureStyle}></div>
-          {/* Layer 2 (another background paper, slightly rotated differently) */}
+          {/* Layer x (another background paper, slightly rotated differently) */}
           <div className="absolute inset-0 bg-orange-50/70 rounded-lg transform rotate-2 shadow-lg z-0" style={textureStyle}></div>
 
           <div className="relative max-w-6xl mx-auto text-center p-8 rounded-lg shadow-xl z-10" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
             <div className="flex items-center justify-center gap-2 mb-4">
               <Film className="w-6 h-6 text-orange-700/60" />
-              <span className="text-xl font-bold font-josefin-sans">lemoncheeks</span>
+              <span className="text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks animation cooperative</span>
             </div>
-            <p className="text-orange-800/60 font-nunito">© 2024 lemoncheeks. All rights reserved.</p>
+            <p className="font-bold font-nunito text-orange-900/80">© 2026 lemoncheeks animation cooperative. All rights reserved.</p>
             <p className="text-orange-700/50 text-sm mt-2 font-nunito">Creating magic, one frame at a time ✨</p>
           </div>
         </div>
