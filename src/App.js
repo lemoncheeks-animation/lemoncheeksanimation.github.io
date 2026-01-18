@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Menu, X, Film, Users, Briefcase, Heart, Instagram, Twitter, Youtube } from 'lucide-react';
 import FloatingSpheres from './FloatingSpheres';
+import border from './media/border.jpg';
+import team_photo1 from './media/team_photo1.jpg';
+import team_photo2 from './media/team_photo2.jpg';
 
 export default function AnimationStudio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -19,7 +22,11 @@ export default function AnimationStudio() {
   };
 
   return (
-    <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden">
+    <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden" style={{
+      backgroundImage: `url(${border})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
       <FloatingSpheres />
       {/* Notebook paper lines background */}
       <div className="fixed inset-0 opacity-20 pointer-events-none" style={{
@@ -204,17 +211,9 @@ export default function AnimationStudio() {
             <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-6 md:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 rounded-lg overflow-hidden z-10" style={textureStyle}>
               {/* Picture Left */}
               <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
-                <div className="relative w-64 h-64 border-4 border-dashed border-orange-400/70 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Drag team photos here" style={textureStyle}>
-                  {/* Initial Photo */}
-                  <div className="absolute inset-0 bg-orange-100/40 border-2 border-dashed border-orange-400/50 flex flex-col items-center justify-center text-xs text-orange-600/60 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0">
-                    <span>Team Photo</span>
-                    <span>(Default)</span>
-                  </div>
-                  {/* Hover Photo */}
-                  <div className="absolute inset-0 bg-teal-100/40 border-2 border-dashed border-teal-400/50 flex flex-col items-center justify-center text-xs text-teal-600/60 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100">
-                    <span>Team Photo</span>
-                    <span>(Fun)</span>
-                  </div>
+                <div className="relative w-[28rem] h-96 border-4 border-dashed border-orange-400/70 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={textureStyle}>
+                  <img src={team_photo1} alt="Team" className="absolute inset-0 w-full h-full object-cover" />
+                  <img src={team_photo2} alt="Team" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
                 </div>
               </div>
               {/* Words Right */}
