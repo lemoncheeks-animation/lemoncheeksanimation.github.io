@@ -50,12 +50,7 @@ export default function AnimationStudio() {
                   clipPath: 'polygon(2% 5%, 8% 2%, 15% 4%, 22% 1%, 30% 3%, 38% 1%, 45% 4%, 52% 2%, 60% 5%, 68% 2%, 75% 4%, 82% 1%, 90% 3%, 95% 6%, 98% 12%, 99% 20%, 98% 28%, 100% 35%, 99% 43%, 98% 50%, 100% 58%, 99% 65%, 98% 72%, 100% 80%, 98% 88%, 95% 94%, 90% 97%, 82% 99%, 75% 96%, 68% 98%, 60% 95%, 52% 98%, 45% 96%, 38% 99%, 30% 97%, 22% 99%, 15% 96%, 8% 98%, 2% 95%)',
                   border: '2px dashed rgba(251, 146, 60, 0.5)'
                 }} />
-              <span className="text-2xl font-bold text-orange-900/70" style={{ 
-                fontFamily: 'Comic Sans MS, cursive',
-                textShadow: '1px 1px 0px rgba(255,255,255,0.5)' 
-              }}>
-                lemoncheeks
-              </span>
+
             </div>
 
             {/* Desktop Menu */}
@@ -101,8 +96,26 @@ export default function AnimationStudio() {
         </div>
       </nav>
 
+      <div className="relative w-full max-w-6xl mx-auto pt-20 px-4 text-center">
+        {/* Layer 1 (background paper, slightly rotated) */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95%] h-[95%] bg-yellow-100/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
+        {/* Layer 2 (another background paper, slightly rotated differently) */}
+        <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[97%] h-[97%] bg-orange-100/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
+        {/* Layer 3 (new paper layer) */}
+        <div className="absolute top-[20px] left-1/2 -translate-x-1/2 w-[99%] h-[99%] bg-amber-100/70 rounded-lg transform rotate-1 shadow-xl z-0" style={textureStyle}></div>
+
+        <img src={style_frame} alt="Decorative frame" className="relative z-10 w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mb-4" />
+        <h1 className="relative z-10 text-5xl md:text-7xl font-bold text-orange-800/70 mb-6" style={{
+            fontFamily: 'Comic Sans MS, cursive',
+            textShadow: '3px 3px 0px rgba(251, 191, 36, 0.3)'
+        }}>
+            lemoncheeks
+        </h1>
+      </div>
+
       {/* Hero Section */}
-      <section id="home" className="py-16 px-4 relative">
+      <section id="home" className="pt-48 pb-16 px-4 relative">
+
         <div className="flex justify-center relative z-10 w-full max-w-6xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-[90%] bg-red-50/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
@@ -110,33 +123,6 @@ export default function AnimationStudio() {
           <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[92%] h-[92%] bg-orange-50/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
           {/* Layer 3 (new paper layer) */}
           <div className="absolute top-[20px] left-1/2 -translate-x-1/2 w-[94%] h-[94%] bg-blue-50/70 rounded-lg transform rotate-1 shadow-xl z-0" style={textureStyle}></div>
-
-          <div className="relative max-w-6xl mx-auto text-center p-8 md:p-12 rounded-lg shadow-xl z-10" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
-            {/* Artwork placeholder - flying character */}
-            <div className="absolute -top-10 right-10 w-32 h-32 bg-yellow-100/40 border-2 border-dashed border-yellow-400/50 flex items-center justify-center text-xs text-yellow-600/60 transform rotate-6" title="Drag character artwork here">
-              Character
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-bold text-orange-800/70 mb-6 mt-8" style={{
-              fontFamily: 'Comic Sans MS, cursive',
-              textShadow: '3px 3px 0px rgba(251, 191, 36, 0.3)'
-            }}>
-              Welcome to<br/>lemoncheeks
-            </h1>
-            
-            <p className="text-xl text-orange-700/70 mb-8 max-w-2xl mx-auto font-medium leading-relaxed" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
-              Bringing stories to life through charming animation and heartfelt storytelling
-            </p>
-
-            {/* Artwork placeholder - small decorative element */}
-            <div className="absolute -bottom-10 left-10 w-24 h-24 bg-pink-100/40 border-2 border-dashed border-pink-400/50 flex items-center justify-center text-xs text-pink-600/60 transform -rotate-8" title="Drag artwork here">
-              Doodle
-            </div>
-            {/* New doodle placeholder - bottom right */}
-            <div className="absolute -bottom-5 right-5 w-20 h-20 bg-green-100/40 border-2 border-dashed border-green-400/50 flex items-center justify-center text-xs text-green-600/60 transform rotate-12" title="Drag artwork here">
-              Blob
-            </div>
-          </div>
         </div>
       </section>
 
