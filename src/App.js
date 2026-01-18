@@ -50,12 +50,13 @@ export default function AnimationStudio() {
                   clipPath: 'polygon(2% 5%, 8% 2%, 15% 4%, 22% 1%, 30% 3%, 38% 1%, 45% 4%, 52% 2%, 60% 5%, 68% 2%, 75% 4%, 82% 1%, 90% 3%, 95% 6%, 98% 12%, 99% 20%, 98% 28%, 100% 35%, 99% 43%, 98% 50%, 100% 58%, 99% 65%, 98% 72%, 100% 80%, 98% 88%, 95% 94%, 90% 97%, 82% 99%, 75% 96%, 68% 98%, 60% 95%, 52% 98%, 45% 96%, 38% 99%, 30% 97%, 22% 99%, 15% 96%, 8% 98%, 2% 95%)',
                   border: '2px dashed rgba(251, 146, 60, 0.5)'
                 }} />
+              <span className="text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks</span>
 
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-6">
-              {['main-image-section', 'about', 'founders', 'projects', 'contact'].map((section) => (
+              {['our-team'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -77,10 +78,9 @@ export default function AnimationStudio() {
               {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-
           {menuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-2">
-              {['main-image-section', 'about', 'founders', 'projects', 'contact'].map((section) => (
+              {['our-team'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -94,7 +94,7 @@ export default function AnimationStudio() {
         </div>
       </nav>
 
-      <div id="main-image-section" className="relative w-full max-w-6xl mx-auto pt-20 px-4 text-center">
+      <div id="welcome" className="relative w-full max-w-6xl mx-auto pt-20 px-4 text-center">
         {/* Layer 1 (background paper, slightly rotated) */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95%] h-[93%] bg-orange-50/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
         {/* Layer 2 (background paper, slightly rotated differently) */}
@@ -172,48 +172,6 @@ export default function AnimationStudio() {
         </div>
       </section>
 
-      {/* Founders Section */}
-      <section id="founders" className="py-16 px-4 relative">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-pink-900/70 inline-block font-josefin-sans" style={{
-              textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
-            }}>Meet the Team</h2>
-          </div>
-          
-          <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
-            {/* Layer 1 (background paper, slightly rotated) */}
-            <div className="absolute inset-0 bg-yellow-100/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
-            {/* Layer 2 (another background paper, slightly rotated differently) */}
-            <div className="absolute inset-0 bg-pink-100/70 rounded-lg transform rotate-1 shadow-lg z-0" style={textureStyle}></div>
-
-            {/* Main content card */}
-            <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-6 md:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 rounded-lg overflow-hidden z-10" style={textureStyle}>
-              {/* Picture Left */}
-              <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
-                <div className="relative w-[28rem] h-96 border-4 border-dashed border-orange-400/70 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={textureStyle}>
-                  <img src={team_photo1} alt="Team" className="absolute inset-0 w-full h-full object-cover" />
-                  <img src={team_photo2} alt="Team" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
-                </div>
-              </div>
-              {/* Words Right */}
-              <div className="w-full lg:w-1/2 p-4 bg-blue-50/50 shadow-md transform -rotate-1 rounded-md z-10" style={textureStyle}>
-                <h3 className="text-2xl font-bold text-left mb-2 text-orange-900/80 font-josefin-sans">Our Team</h3>
-                <p className="text-red-500/70 text-left mb-4 font-bold font-nunito">Animators & Storytellers</p>
-                <p className="text-orange-800/70 text-left leading-relaxed font-nunito">
-                  We are a collective of passionate artists, dreamers, and technicians united by a love for storytelling. Together, we bring imagination to life.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Small decorative artwork placeholders */}
-          <div className="absolute -right-10 top-40 w-32 h-32 bg-pink-100/40 border-2 border-dashed border-pink-400/50 hidden lg:flex items-center justify-center text-xs text-pink-600/60" title="Drag artwork here">
-            Doodle
-          </div>
-        </div>
-      </section>
-
       {/* Projects Section */}
       <section id="projects" className="py-16 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
@@ -252,6 +210,48 @@ export default function AnimationStudio() {
                 into every frame, and we can't wait to share it with you.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founders Section */}
+      <section id="our-team" className="py-16 px-4 relative">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-pink-900/70 inline-block font-josefin-sans" style={{
+              textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
+            }}>hello world!</h2>
+          </div>
+          
+          <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
+            {/* Layer 1 (background paper, slightly rotated) */}
+            <div className="absolute inset-0 bg-yellow-100/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
+            {/* Layer 2 (another background paper, slightly rotated differently) */}
+            <div className="absolute inset-0 bg-pink-100/70 rounded-lg transform rotate-1 shadow-lg z-0" style={textureStyle}></div>
+
+            {/* Main content card */}
+            <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-6 md:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 rounded-lg overflow-hidden z-10" style={textureStyle}>
+              {/* Picture Left */}
+              <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
+                <div className="relative w-[28rem] h-96 border-4 border-dashed border-orange-400/70 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={textureStyle}>
+                  <img src={team_photo1} alt="Team" className="absolute inset-0 w-full h-full object-cover" />
+                  <img src={team_photo2} alt="Team" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
+                </div>
+              </div>
+              {/* Words Right */}
+              <div className="w-full lg:w-1/2 p-4 bg-blue-50/50 shadow-md transform -rotate-1 rounded-md z-10" style={textureStyle}>
+                <h3 className="text-2xl font-bold text-left mb-2 text-orange-900/80 font-josefin-sans">Our Team</h3>
+                <p className="text-red-500/70 text-left mb-4 font-bold font-nunito">Animators & Storytellers</p>
+                <p className="text-orange-800/70 text-left leading-relaxed font-nunito">
+                  We are a collective of passionate artists, dreamers, and technicians united by a love for storytelling. Together, we bring imagination to life.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Small decorative artwork placeholders */}
+          <div className="absolute -right-10 top-40 w-32 h-32 bg-pink-100/40 border-2 border-dashed border-pink-400/50 hidden lg:flex items-center justify-center text-xs text-pink-600/60" title="Drag artwork here">
+            Doodle
           </div>
         </div>
       </section>
