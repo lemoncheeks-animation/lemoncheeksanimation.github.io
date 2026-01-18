@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'josefin-sans': ['"Josefin Sans"', 'sans-serif'],
+        'nunito': ['Nunito', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

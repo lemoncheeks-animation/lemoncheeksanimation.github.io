@@ -55,7 +55,7 @@ export default function AnimationStudio() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-6">
-              {['home', 'about', 'founders', 'projects'].map((section) => (
+              {['main-image-section', 'about', 'founders', 'projects'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -81,7 +81,7 @@ export default function AnimationStudio() {
 
           {menuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-2">
-              {['home', 'about', 'founders', 'projects'].map((section) => (
+              {['main-image-section', 'about', 'founders', 'projects'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -96,25 +96,23 @@ export default function AnimationStudio() {
         </div>
       </nav>
 
-      <div className="relative w-full max-w-6xl mx-auto pt-20 px-4 text-center">
+      <div id="main-image-section" className="relative w-full max-w-6xl mx-auto pt-20 px-4 text-center">
         {/* Layer 1 (background paper, slightly rotated) */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95%] h-[95%] bg-yellow-100/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
-        {/* Layer 2 (another background paper, slightly rotated differently) */}
-        <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[97%] h-[97%] bg-orange-100/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
-        {/* Layer 3 (new paper layer) */}
-        <div className="absolute top-[20px] left-1/2 -translate-x-1/2 w-[99%] h-[99%] bg-amber-100/70 rounded-lg transform rotate-1 shadow-xl z-0" style={textureStyle}></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95%] h-[93%] bg-orange-50/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
+        {/* Layer 2 (background paper, slightly rotated differently) */}
+        <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[96%] h-[94%] bg-orange-100/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
+        {/* Layer 3 (middle paper layer) */}
+        <div className="absolute top-[20px] left-1/2 -translate-x-1/2 w-[97%] h-[95%] bg-orange-200/70 rounded-lg transform rotate-1 shadow-lg z-0" style={textureStyle}></div>
+        {/* Layer 4 (inner paper layer) */}
+        <div className="absolute top-[30px] left-1/2 -translate-x-1/2 w-[98%] h-[96%] bg-orange-300/70 rounded-lg transform -rotate-3 shadow-lg z-0" style={textureStyle}></div>
+        {/* Layer 5 (top-most paper layer) */}
+        <div className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[99%] h-[97%] bg-yellow-100/70 rounded-lg transform rotate-2 shadow-xl z-0" style={textureStyle}></div>
 
         <img src={style_frame} alt="Decorative frame" className="relative z-10 w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mb-4" />
-        <h1 className="relative z-10 text-5xl md:text-7xl font-bold text-orange-800/70 mb-6" style={{
-            fontFamily: 'Comic Sans MS, cursive',
-            textShadow: '3px 3px 0px rgba(251, 191, 36, 0.3)'
-        }}>
-            lemoncheeks
-        </h1>
       </div>
 
       {/* Hero Section */}
-      <section id="home" className="pt-48 pb-16 px-4 relative">
+      <section id="home" className="pt-16 pb-16 px-4 relative">
 
         <div className="flex justify-center relative z-10 w-full max-w-6xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
