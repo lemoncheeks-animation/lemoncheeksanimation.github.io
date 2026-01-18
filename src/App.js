@@ -55,16 +55,15 @@ export default function AnimationStudio() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-6">
-              {['main-image-section', 'about', 'founders', 'projects'].map((section) => (
+              {['main-image-section', 'about', 'founders', 'projects', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`capitalize font-bold transition-all px-3 py-1 ${
+                  className={`capitalize font-bold transition-all px-3 py-1 font-josefin-sans ${
                     activeSection === section
                       ? 'text-orange-900/80 underline'
                       : 'text-orange-800/60 hover:text-orange-900/80'
                   }`}
-                  style={{ fontFamily: 'Comic Sans MS, cursive' }}
                 >
                   {section}
                 </button>
@@ -81,12 +80,11 @@ export default function AnimationStudio() {
 
           {menuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-2">
-              {['main-image-section', 'about', 'founders', 'projects'].map((section) => (
+              {['main-image-section', 'about', 'founders', 'projects', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className="block w-full text-left capitalize py-2 px-3 text-orange-800/70 font-bold"
-                  style={{ fontFamily: 'Comic Sans MS, cursive' }}
+                  className="block w-full text-left capitalize py-2 px-3 text-orange-800/70 font-bold font-josefin-sans"
                 >
                   {section}
                 </button>
@@ -144,8 +142,7 @@ export default function AnimationStudio() {
 
             <div className="flex items-center gap-3 mb-6">
               <Heart className="w-8 h-8 text-red-400/70 fill-red-400/50" />
-              <h2 className="text-4xl font-bold text-green-800/70" style={{
-                fontFamily: 'Comic Sans MS, cursive',
+              <h2 className="text-4xl font-bold text-green-800/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
               }}>About Us</h2>
             </div>
@@ -155,7 +152,7 @@ export default function AnimationStudio() {
               Art
             </div>
 
-            <div className="space-y-4 text-lg text-green-900/70 leading-relaxed" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+            <div className="space-y-4 text-lg text-green-900/70 leading-relaxed font-nunito">
               <p>
                 We're a small, passionate animation studio dedicated to creating heartwarming stories
                 that resonate with audiences of all ages. Our mission is to blend creativity, artistry,
@@ -179,8 +176,7 @@ export default function AnimationStudio() {
       <section id="founders" className="py-16 px-4 relative">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-pink-900/70 inline-block" style={{
-              fontFamily: 'Comic Sans MS, cursive',
+            <h2 className="text-4xl font-bold text-pink-900/70 inline-block font-josefin-sans" style={{
               textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
             }}>Meet the Team</h2>
           </div>
@@ -202,9 +198,9 @@ export default function AnimationStudio() {
               </div>
               {/* Words Right */}
               <div className="w-full lg:w-1/2 p-4 bg-blue-50/50 shadow-md transform -rotate-1 rounded-md z-10" style={textureStyle}>
-                <h3 className="text-2xl font-bold text-left mb-2 text-orange-900/80" style={{ fontFamily: 'Comic Sans MS, cursive' }}>Our Team</h3>
-                <p className="text-red-500/70 text-left mb-4 font-bold" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>Animators & Storytellers</p>
-                <p className="text-orange-800/70 text-left leading-relaxed" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                <h3 className="text-2xl font-bold text-left mb-2 text-orange-900/80 font-josefin-sans">Our Team</h3>
+                <p className="text-red-500/70 text-left mb-4 font-bold font-nunito">Animators & Storytellers</p>
+                <p className="text-orange-800/70 text-left leading-relaxed font-nunito">
                   We are a collective of passionate artists, dreamers, and technicians united by a love for storytelling. Together, we bring imagination to life.
                 </p>
               </div>
@@ -237,8 +233,7 @@ export default function AnimationStudio() {
               </div>
             </div>
             <div className="p-8 md:p-12">
-              <h3 className="text-3xl font-bold mb-4 text-pink-900/70" style={{
-                fontFamily: 'Comic Sans MS, cursive',
+              <h3 className="text-3xl font-bold mb-4 text-pink-900/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.3)'
               }}>Our First Short Film</h3>
               
@@ -247,12 +242,12 @@ export default function AnimationStudio() {
                 Character
               </div>
 
-              <p className="text-lg text-pink-900/70 leading-relaxed mb-6" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+              <p className="text-lg text-pink-900/70 leading-relaxed mb-6 font-nunito">
                 Our debut animated short film is currently in production! This heartwarming story
                 explores themes of friendship, adventure, and self-discovery through stunning
                 visuals and compelling characters.
               </p>
-              <p className="text-pink-800/70 leading-relaxed mb-4" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+              <p className="text-pink-800/70 leading-relaxed mb-4 font-nunito">
                 Follow our journey as we bring this magical world to life. We're pouring our hearts
                 into every frame, and we can't wait to share it with you.
               </p>
@@ -262,7 +257,7 @@ export default function AnimationStudio() {
       </section>
 
       {/* Social Links Section */}
-      <section className="py-16 px-4 relative">
+      <section id="contact" className="py-16 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
           <div className="absolute inset-0 bg-blue-50/70 rounded-lg transform rotate-2 shadow-lg z-0" style={textureStyle}></div>
@@ -270,11 +265,10 @@ export default function AnimationStudio() {
           <div className="absolute inset-0 bg-purple-50/70 rounded-lg transform -rotate-3 shadow-lg z-0" style={textureStyle}></div>
 
           <div className="relative max-w-4xl mx-auto text-center p-8 md:p-12 rounded-lg shadow-xl z-10" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
-            <h2 className="text-4xl font-bold text-orange-900/80 mb-6" style={{
-              fontFamily: 'Comic Sans MS, cursive',
+            <h2 className="text-4xl font-bold text-orange-900/80 mb-6 font-josefin-sans" style={{
               textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
             }}>Stay Connected</h2>
-            <p className="text-orange-800/70 text-lg mb-8" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+            <p className="text-orange-800/70 text-lg mb-8 font-nunito">
               Follow us on social media for behind-the-scenes content, updates, and more!
             </p>
             <div className="flex justify-center gap-6">
@@ -322,10 +316,10 @@ export default function AnimationStudio() {
           <div className="relative max-w-6xl mx-auto text-center p-8 rounded-lg shadow-xl z-10" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
             <div className="flex items-center justify-center gap-2 mb-4">
               <Film className="w-6 h-6 text-orange-700/60" />
-              <span className="text-xl font-bold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>lemoncheeks</span>
+              <span className="text-xl font-bold font-josefin-sans">lemoncheeks</span>
             </div>
-            <p className="text-orange-800/60" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>© 2024 lemoncheeks. All rights reserved.</p>
-            <p className="text-orange-700/50 text-sm mt-2" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>Creating magic, one frame at a time ✨</p>
+            <p className="text-orange-800/60 font-nunito">© 2024 lemoncheeks. All rights reserved.</p>
+            <p className="text-orange-700/50 text-sm mt-2 font-nunito">Creating magic, one frame at a time ✨</p>
           </div>
         </div>
       </footer>

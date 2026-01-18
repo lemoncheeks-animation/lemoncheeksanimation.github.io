@@ -6,8 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'josefin-sans': ['"Josefin Sans"', 'sans-serif'],
+        'josefin-sans': ['Josefin Sans', 'sans-serif'],
         'nunito': ['Nunito', 'sans-serif'],
+        'lexend': ['Lexend', 'sans-serif'],
       },
     },
   },
