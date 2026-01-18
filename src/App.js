@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Menu, X, Film, Users, Briefcase, Heart, Instagram, Twitter, Youtube } from 'lucide-react';
 import FloatingSpheres from './FloatingSpheres';
-import border from './media/border.jpg';
+import border from './media/border2.jpg';
 import team_photo1 from './media/team_photo1.jpg';
 import team_photo2 from './media/team_photo2.jpg';
+import style_frame from './media/style_frame.png';
 
 export default function AnimationStudio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -23,9 +24,10 @@ export default function AnimationStudio() {
 
   return (
     <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden" style={{
-      backgroundImage: `url(${border})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
+      border: '5px solid transparent',
+      borderImageSource: `url(${border})`,
+      borderImageSlice: '2 fill',
+      borderImageRepeat: 'stretch'
     }}>
       <FloatingSpheres />
       {/* Notebook paper lines background */}
@@ -42,19 +44,17 @@ export default function AnimationStudio() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               {/* Placeholder for logo artwork */}
-              <div className="w-12 h-12 bg-orange-200/40 flex items-center justify-center" 
-                title="Drag and drop your logo here"
+              <img src={style_frame} alt="logo" className="w-12 h-12 bg-orange-200/40 flex items-center justify-center"
+                
                 style={{
                   clipPath: 'polygon(2% 5%, 8% 2%, 15% 4%, 22% 1%, 30% 3%, 38% 1%, 45% 4%, 52% 2%, 60% 5%, 68% 2%, 75% 4%, 82% 1%, 90% 3%, 95% 6%, 98% 12%, 99% 20%, 98% 28%, 100% 35%, 99% 43%, 98% 50%, 100% 58%, 99% 65%, 98% 72%, 100% 80%, 98% 88%, 95% 94%, 90% 97%, 82% 99%, 75% 96%, 68% 98%, 60% 95%, 52% 98%, 45% 96%, 38% 99%, 30% 97%, 22% 99%, 15% 96%, 8% 98%, 2% 95%)',
                   border: '2px dashed rgba(251, 146, 60, 0.5)'
-                }}>
-                <span className="text-xs text-orange-600/60">Logo</span>
-              </div>
+                }} />
               <span className="text-2xl font-bold text-orange-900/70" style={{ 
                 fontFamily: 'Comic Sans MS, cursive',
                 textShadow: '1px 1px 0px rgba(255,255,255,0.5)' 
               }}>
-                YourStudio
+                lemoncheeks
               </span>
             </div>
 
@@ -121,7 +121,7 @@ export default function AnimationStudio() {
               fontFamily: 'Comic Sans MS, cursive',
               textShadow: '3px 3px 0px rgba(251, 191, 36, 0.3)'
             }}>
-              Welcome to<br/>YourStudio
+              Welcome to<br/>lemoncheeks
             </h1>
             
             <p className="text-xl text-orange-700/70 mb-8 max-w-2xl mx-auto font-medium leading-relaxed" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
@@ -256,7 +256,7 @@ export default function AnimationStudio() {
               <h3 className="text-3xl font-bold mb-4 text-pink-900/70" style={{
                 fontFamily: 'Comic Sans MS, cursive',
                 textShadow: '2px 2px 0px rgba(255,255,255,0.3)'
-              }}>Your First Short Film</h3>
+              }}>Our First Short Film</h3>
               
               {/* Small character placeholder */}
               <div className="float-left mr-4 mb-4 w-24 h-32 bg-red-100/40 border-2 border-dashed border-red-400/50 flex items-center justify-center text-xs text-red-600/60 transform rotate-6" title="Drag character here">
@@ -338,9 +338,9 @@ export default function AnimationStudio() {
           <div className="relative max-w-6xl mx-auto text-center p-8 rounded-lg shadow-xl z-10" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
             <div className="flex items-center justify-center gap-2 mb-4">
               <Film className="w-6 h-6 text-orange-700/60" />
-              <span className="text-xl font-bold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>YourStudio</span>
+              <span className="text-xl font-bold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>lemoncheeks</span>
             </div>
-            <p className="text-orange-800/60" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>© 2024 YourStudio. All rights reserved.</p>
+            <p className="text-orange-800/60" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>© 2024 lemoncheeks. All rights reserved.</p>
             <p className="text-orange-700/50 text-sm mt-2" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>Creating magic, one frame at a time ✨</p>
           </div>
         </div>
