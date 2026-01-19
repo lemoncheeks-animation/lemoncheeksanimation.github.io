@@ -223,7 +223,7 @@ export default function AnimationStudio() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-pink-900/70 inline-block font-josefin-sans" style={{
               textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
-            }}>hello world!</h2>
+            }}>🍋hello world!🍋</h2>
           </div>
           
           <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
@@ -271,9 +271,6 @@ export default function AnimationStudio() {
             <h2 className="text-4xl font-bold text-orange-900/80 mb-6 font-josefin-sans" style={{
               textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
             }}>Stay Connected</h2>
-            <p className="text-orange-800/70 text-lg mb-8 font-nunito">
-              Follow us on social media for behind-the-scenes content, updates, and more!
-            </p>
             <div className="flex justify-center gap-6">
               <a
                 href="https://instagram.com"
