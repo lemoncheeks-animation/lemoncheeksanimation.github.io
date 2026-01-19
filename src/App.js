@@ -4,6 +4,7 @@ import FloatingSpheres from './FloatingSpheres';
 import border from './media/border2.jpg';
 import team_photo1 from './media/team_photo1.jpg';
 import team_photo2 from './media/team_photo2.jpg';
+import freddy from './media/freddy.png';
 import style_frame from './media/style_frame.png';
 
 export default function AnimationStudio() {
@@ -127,9 +128,9 @@ export default function AnimationStudio() {
       <section id="about" className="py-16 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
-          <div className="absolute inset-0 bg-green-50/70 rounded-lg transform -rotate-3 shadow-lg z-0" style={textureStyle}></div>
+          <div className="absolute inset-0 bg-red-100/70 rounded-lg transform -rotate-3 shadow-lg z-0" style={textureStyle}></div>
           {/* Layer 3 (new paper layer) */}
-          <div className="absolute inset-0 bg-purple-50/70 rounded-lg transform -rotate-1 shadow-xl z-0" style={textureStyle}></div>
+          <div className="absolute inset-0 bg-pink-100/70 rounded-lg transform -rotate-1 shadow-xl z-0" style={textureStyle}></div>
           {/* New doodle placeholder - top right */}
           <div className="absolute -top-5 right-5 w-24 h-24 bg-red-100/40 border-2 border-dashed border-red-400/50 flex items-center justify-center text-xs text-red-600/60 transform rotate-6" title="Drag artwork here">
             Star
@@ -143,7 +144,7 @@ export default function AnimationStudio() {
 
             <div className="flex items-center gap-3 mb-6">
               <Heart className="w-8 h-8 text-red-400/70 fill-red-400/50" />
-              <h2 className="text-4xl font-bold text-green-800/70 font-josefin-sans" style={{
+              <h2 className="text-4xl font-bold text-orange-800/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
               }}>About Us</h2>
             </div>
@@ -153,7 +154,7 @@ export default function AnimationStudio() {
               Art
             </div>
 
-            <div className="space-y-4 text-lg text-green-900/70 leading-relaxed font-nunito">
+            <div className="space-y-4 text-lg text-orange-800/70 leading-relaxed font-nunito">
               <p>
                 Welcome! Lemoncheeks Animation Cooperative is a worker cooperative, 
                 with a mission to tell inclusive, original stories through animation. 
@@ -233,7 +234,7 @@ export default function AnimationStudio() {
             <div className="absolute inset-0 bg-pink-100/70 rounded-lg transform rotate-1 shadow-lg z-0" style={textureStyle}></div>
 
             {/* Main content card */}
-            <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-6 md:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 rounded-lg overflow-hidden z-10" style={textureStyle}>
+            <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-6 md:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 rounded-lg z-10" style={textureStyle}>
               {/* Picture Left */}
               <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
                 <div className="relative w-[28rem] h-96 border-4 border-dashed border-orange-400/70 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={textureStyle}>
@@ -242,12 +243,13 @@ export default function AnimationStudio() {
                 </div>
               </div>
               {/* Words Right */}
-              <div className="w-full lg:w-1/2 p-4 bg-blue-50/50 shadow-md transform -rotate-1 rounded-md z-10" style={textureStyle}>
+              <div className="relative w-full lg:w-1/2 bg-blue-50/50 shadow-md transform -rotate-1 rounded-md z-10" style={textureStyle}>
                 <h3 className="text-2xl font-bold text-left mb-2 text-orange-900/80 font-josefin-sans">Our Team</h3>
                 <p className="text-orange-800/70 text-left leading-relaxed font-nunito">
                  We're Jackie, Frank, and Lauren, 3 California based artists (hello from SF and LA!) 
                  Our final secret member is Freddy the cat. He has bad teeth but he's still giving you a smile:) 
                 </p>
+                <img src={freddy} alt="freddy" className="w-32 absolute -bottom-60 right-3" />
               </div>
             </div>
           </div>
