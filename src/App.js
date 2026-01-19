@@ -13,7 +13,8 @@ export default function AnimationStudio() {
   const scrollToSection = (section) => {
     setActiveSection(section);
     setMenuOpen(false);
-    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+    const targetId = section === 'home' ? 'welcome' : section; // Map 'home' to 'welcome' for scrolling
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   // Paper texture overlay
@@ -56,17 +57,17 @@ export default function AnimationStudio() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-6">
-              {['our-team'].map((section) => (
+              {['home', 'about', 'projects', 'our-team', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`capitalize font-bold transition-all px-3 py-1 font-josefin-sans ${
+                  className={`font-bold transition-all px-3 py-1 font-josefin-sans ${
                     activeSection === section
                       ? 'text-orange-900/80 underline'
                       : 'text-orange-800/60 hover:text-orange-900/80'
                   }`}
                 >
-                  {section}
+                  {section === 'our-team' ? 'our team' : section}
                 </button>
               ))}
             </div>
@@ -80,13 +81,13 @@ export default function AnimationStudio() {
           </div>
           {menuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-2">
-              {['our-team'].map((section) => (
+              {['home', 'about', 'projects', 'our-team', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className="block w-full text-left capitalize py-2 px-3 text-orange-800/70 font-bold font-josefin-sans"
+                  className="block w-full text-left py-2 px-3 text-orange-800/70 font-bold font-josefin-sans"
                 >
-                  {section}
+                  {section === 'our-team' ? 'our team' : section}
                 </button>
               ))}
             </div>
