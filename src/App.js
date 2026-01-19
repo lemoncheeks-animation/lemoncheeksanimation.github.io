@@ -14,7 +14,7 @@ export default function AnimationStudio() {
     setActiveSection(section);
     setMenuOpen(false);
     const targetId = section === 'home' ? 'welcome' : section; // Map 'home' to 'welcome' for scrolling
-    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'auto' });
   };
 
   // Paper texture overlay
@@ -155,18 +155,14 @@ export default function AnimationStudio() {
 
             <div className="space-y-4 text-lg text-green-900/70 leading-relaxed font-nunito">
               <p>
-                We're a small, passionate animation studio dedicated to creating heartwarming stories
-                that resonate with audiences of all ages. Our mission is to blend creativity, artistry,
-                and emotion into every frame we produce.
+                Welcome! Lemoncheeks Animation Cooperative is a worker cooperative, 
+                with a mission to tell inclusive, original stories through animation. 
+                We are collectively owned and governed, grounded in equity, inclusion, and care.
               </p>
               <p>
-                Starting with our debut short film, we're building a collection of unique animated
-                experiences that celebrate the power of imagination and the beauty of visual storytelling.
-              </p>
-              <p>
-                Every project we undertake is crafted with love, attention to detail, and a commitment
-                to bringing joy to our viewers. We believe animation has the power to transport,
-                inspire, and connect people across the world.
+                We believe animation can be a powerful way to amplify underrepresented voices. As a cooperative
+                rooted in bicultural perspectives, we want to create work that reflects the richness of our communities
+                and experiences. 
               </p>
             </div>
           </div>
@@ -194,7 +190,7 @@ export default function AnimationStudio() {
             <div className="p-8 md:p-12">
               <h3 className="text-3xl font-bold mb-4 text-pink-900/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.3)'
-              }}>Our First Short Film</h3>
+              }}>Projects</h3>
               
               {/* Small character placeholder */}
               <div className="float-left mr-4 mb-4 w-24 h-32 bg-red-100/40 border-2 border-dashed border-red-400/50 flex items-center justify-center text-xs text-red-600/60 transform rotate-6" title="Drag character here">
@@ -202,13 +198,19 @@ export default function AnimationStudio() {
               </div>
 
               <p className="text-lg text-pink-900/70 leading-relaxed mb-6 font-nunito">
-                Our debut animated short film is currently in production! This heartwarming story
-                explores themes of friendship, adventure, and self-discovery through stunning
-                visuals and compelling characters.
+                Our animated short film is currently in production! 
+
+                Our story will explore the small, tender complexities of bicultural identity and
+                intergenerational love between parent and child.
+                
+                This short explores questions like - 
+                What does it mean to grow up in two cultures at once? 
+                How do both love and misunderstanding 
+                coexist between an immigrant parent and their child? 
+                What are the small rituals and idiosyncrasies that carry whole histories?
               </p>
               <p className="text-pink-800/70 leading-relaxed mb-4 font-nunito">
-                Follow our journey as we bring this magical world to life. We're pouring our hearts
-                into every frame, and we can't wait to share it with you.
+                Stay tuned, more to come! We can't wait to share our short film and our journey with you!
               </p>
             </div>
           </div>
@@ -242,9 +244,9 @@ export default function AnimationStudio() {
               {/* Words Right */}
               <div className="w-full lg:w-1/2 p-4 bg-blue-50/50 shadow-md transform -rotate-1 rounded-md z-10" style={textureStyle}>
                 <h3 className="text-2xl font-bold text-left mb-2 text-orange-900/80 font-josefin-sans">Our Team</h3>
-                <p className="text-red-500/70 text-left mb-4 font-bold font-nunito">Animators & Storytellers</p>
                 <p className="text-orange-800/70 text-left leading-relaxed font-nunito">
-                  We are a collective of passionate artists, dreamers, and technicians united by a love for storytelling. Together, we bring imagination to life.
+                 We're Jackie, Frank, and Lauren, 3 California based artists (hello from SF and LA!) 
+                 Our final secret member is Freddy the cat. He has bad teeth but he's still giving you a smile:) 
                 </p>
               </div>
             </div>
@@ -320,7 +322,7 @@ export default function AnimationStudio() {
               <span className="text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks animation cooperative</span>
             </div>
             <p className="font-bold font-nunito text-orange-900/80">© 2026 lemoncheeks animation cooperative. All rights reserved.</p>
-            <p className="text-orange-700/50 text-sm mt-2 font-nunito">Creating magic, one frame at a time ✨</p>
+            <p className="text-orange-700/50 text-sm mt-2 font-nunito">Creating lemons and magic</p>
           </div>
         </div>
       </footer>
