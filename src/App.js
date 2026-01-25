@@ -108,7 +108,7 @@ export default function AnimationStudio() {
         {/* Layer 5 (top-most paper layer) */}
         <div className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[99%] h-[97%] bg-yellow-100/70 rounded-lg transform rotate-2 shadow-xl z-0" style={textureStyle}></div>
 
-        <img src={style_frame} alt="Decorative frame" className="relative z-10 w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mb-4" />
+        <img src={style_frame} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mt-8 mb-4" />
       </div>
 
       {/* Hero Section */}
@@ -136,7 +136,7 @@ export default function AnimationStudio() {
             Star
           </div>
 
-          <div className="relative bg-gradient-to-br from-green-50/60 to-teal-50/60 shadow-xl p-8 md:p-12 border-4 border-green-200/50 rounded-lg z-10" style={textureStyle}>
+          <div className="relative bg-gradient-to-br from-green-50/60 to-teal-50/60 shadow-xl p-8 md:p-12 border-4 border-green-200/50 z-10" style={textureStyle}>
             {/* Artwork placeholder - left side character */}
             <div className="absolute -left-10 top-10 w-40 h-48 bg-green-100/40 border-2 border-dashed border-green-400/50 flex items-center justify-center text-xs text-green-600/60 hidden lg:flex transform rotate-6" title="Drag character artwork here">
               Character
@@ -154,7 +154,7 @@ export default function AnimationStudio() {
               Art
             </div>
 
-            <div className="space-y-4 text-lg text-orange-800/70 leading-relaxed font-nunito">
+            <div className="space-y-4 text-lg text-orange-800/70 leading-relaxed font-josefin-sans">
               <p>
                 Welcome! Lemoncheeks Animation Cooperative is a worker cooperative, 
                 with a mission to tell inclusive, original stories through animation. 
@@ -237,7 +237,7 @@ export default function AnimationStudio() {
             <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-6 md:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 rounded-lg z-10" style={textureStyle}>
               {/* Picture Left */}
               <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
-                <div className="relative w-[28rem] h-96 border-4 border-dashed border-orange-400/70 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={textureStyle}>
+                <div className="relative w-[28rem] h-96 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={{...textureStyle, border: '16px solid transparent', borderImageSource: `url(${border})`, borderImageSlice: '8 fill', borderImageRepeat: 'stretch'}}>
                   <img src={team_photo1} alt="Team" className="absolute inset-0 w-full h-full object-cover" />
                   <img src={team_photo2} alt="Team" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
                 </div>
@@ -321,7 +321,7 @@ export default function AnimationStudio() {
               <span className="text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks animation cooperative</span>
             </div>
             <p className="font-bold font-nunito text-orange-900/80">© 2026 lemoncheeks animation cooperative. All rights reserved.</p>
-            <p className="text-orange-700/50 text-sm mt-2 font-nunito">Creating lemons and magic</p>
+            <p className="text-orange-700/50 text-sm mt-2 font-nunito">Moving and grooving</p>
           </div>
         </div>
       </footer>
