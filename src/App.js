@@ -26,10 +26,10 @@ export default function AnimationStudio() {
 
   return (
     <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden" style={{
-      border: '5px solid transparent',
+      border: '4px solid transparent',
       borderImageSource: `url(${border})`,
-      borderImageSlice: '2 fill',
-      borderImageRepeat: 'stretch'
+      borderImageSlice: '6 fill',
+      borderImageRepeat: 'round'
     }}>
       <FloatingSpheres />
       {/* Notebook paper lines background */}
