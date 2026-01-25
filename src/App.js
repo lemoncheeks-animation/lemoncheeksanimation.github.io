@@ -6,6 +6,7 @@ import team_photo1 from './media/team_photo1.jpg';
 import team_photo2 from './media/team_photo2.jpg';
 import freddy from './media/freddy.png';
 import style_frame from './media/style_frame.png';
+import project_artwork from './media/project_photo.jpg';
 
 export default function AnimationStudio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -181,13 +182,7 @@ export default function AnimationStudio() {
           {/* Project Card */}
           <div className="relative bg-gradient-to-br from-pink-50/60 to-red-50/60 border-4 border-pink-200/50 shadow-xl rounded-lg overflow-hidden z-10" style={textureStyle}>
             {/* Large artwork placeholder for project image/scene */}
-            <div className="h-80 bg-gradient-to-br from-yellow-100/40 to-orange-100/40 border-b-4 border-pink-200/50 flex flex-col items-center justify-center relative transform -rotate-1 scale-105" style={textureStyle}>
-              <div className="w-64 h-48 border-2 border-dashed border-orange-400/50 flex flex-col items-center justify-center text-orange-600/60">
-                <Film className="w-12 h-12 mb-2 opacity-50" />
-                <span className="text-sm">Project Artwork</span>
-                <span className="text-xs">Drag scene or poster here</span>
-              </div>
-            </div>
+            <img src={project_artwork} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mt-8 mb-4" />
             <div className="p-8 md:p-12">
               <h3 className="text-3xl font-bold mb-4 text-pink-900/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.3)'
@@ -237,13 +232,13 @@ export default function AnimationStudio() {
             <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-4 border-orange-200/50 shadow-xl p-6 md:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 rounded-lg z-10" style={textureStyle}>
               {/* Picture Left */}
               <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
-                <div className="relative w-[28rem] h-96 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={{...textureStyle, border: '16px solid transparent', borderImageSource: `url(${border})`, borderImageSlice: '8 fill', borderImageRepeat: 'stretch'}}>
+                <div className="relative w-[28rem] h-96 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={{...textureStyle, border: '16px solid transparent', borderImageSlice: '8 fill', borderImageRepeat: 'stretch'}}>
                   <img src={team_photo1} alt="Team" className="absolute inset-0 w-full h-full object-cover" />
                   <img src={team_photo2} alt="Team" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
                 </div>
               </div>
               {/* Words Right */}
-              <div className="relative w-full lg:w-1/2 bg-blue-50/50 shadow-md transform -rotate-1 rounded-md z-10" style={textureStyle}>
+              <div className="relative w-full lg:w-1/2 z-10" style={textureStyle}>
                 <h3 className="text-2xl font-bold text-left mb-2 text-orange-900/80 font-josefin-sans">Our Team</h3>
                 <p className="text-orange-800/70 text-left leading-relaxed font-nunito">
                  We're Jackie, Frank, and Lauren, 3 California based artists (hello from SF and LA!) 
