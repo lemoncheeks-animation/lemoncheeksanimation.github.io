@@ -7,6 +7,7 @@ import team_photo2 from './media/team_photo2.jpg';
 import freddy from './media/freddy.png';
 import style_frame from './media/style_frame.png';
 import project_artwork from './media/project_photo.jpg';
+import characters from './media/characters.png';
 
 export default function AnimationStudio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -132,27 +133,13 @@ export default function AnimationStudio() {
           <div className="absolute inset-0 bg-red-100/70 rounded-lg transform -rotate-3 shadow-lg z-0" style={textureStyle}></div>
           {/* Layer 3 (new paper layer) */}
           <div className="absolute inset-0 bg-pink-100/70 rounded-lg transform -rotate-1 shadow-xl z-0" style={textureStyle}></div>
-          {/* New doodle placeholder - top right */}
-          <div className="absolute -top-5 right-5 w-24 h-24 bg-red-100/40 border-2 border-dashed border-red-400/50 flex items-center justify-center text-xs text-red-600/60 transform rotate-6" title="Drag artwork here">
-            Star
-          </div>
 
           <div className="relative bg-gradient-to-br from-green-50/60 to-teal-50/60 shadow-xl p-8 md:p-12 border-4 border-green-200/50 z-10" style={textureStyle}>
-            {/* Artwork placeholder - left side character */}
-            <div className="absolute -left-10 top-10 w-40 h-48 bg-green-100/40 border-2 border-dashed border-green-400/50 flex items-center justify-center text-xs text-green-600/60 hidden lg:flex transform rotate-6" title="Drag character artwork here">
-              Character
-            </div>
 
             <div className="flex items-center gap-3 mb-6">
-              <Heart className="w-8 h-8 text-red-400/70 fill-red-400/50" />
               <h2 className="text-4xl font-bold text-orange-800/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
               }}>About Us</h2>
-            </div>
-            
-            {/* Small artwork placeholder inside */}
-            <div className="absolute -right-5 -bottom-5 w-28 h-28 bg-yellow-100/40 border-2 border-dashed border-yellow-400/50 flex items-center justify-center text-xs text-yellow-600/60 transform -rotate-12" title="Drag artwork here">
-              Art
             </div>
 
             <div className="space-y-4 text-lg text-orange-800/70 leading-relaxed font-lexend">
@@ -182,16 +169,13 @@ export default function AnimationStudio() {
           {/* Project Card */}
           <div className="relative bg-gradient-to-br from-pink-50/60 to-red-50/60 border-4 border-pink-200/50 shadow-xl rounded-lg overflow-hidden z-10" style={textureStyle}>
             {/* Large artwork placeholder for project image/scene */}
-            <img src={project_artwork} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mt-8 mb-4" />
+            <img src={project_artwork} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-4xl mt-8 mb-4" />
             <div className="p-8 md:p-12">
               <h3 className="text-3xl font-bold mb-4 text-pink-900/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.3)'
               }}>Projects</h3>
               
-              {/* Small character placeholder */}
-              <div className="float-left mr-4 mb-4 w-24 h-32 bg-red-100/40 border-2 border-dashed border-red-400/50 flex items-center justify-center text-xs text-red-600/60 transform rotate-6" title="Drag character here">
-                Character
-              </div>
+               <img src={characters} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mt-8 mb-4" />
 
               <p className="text-lg text-pink-900/70 leading-relaxed mb-6 font-nunito">
                 Our animated short film is currently in production! 
@@ -250,7 +234,7 @@ export default function AnimationStudio() {
           </div>
 
           {/* Small decorative artwork placeholders */}
-          <div className="absolute -right-10 top-40 w-32 h-32 bg-pink-100/40 border-2 border-dashed border-pink-400/50 hidden lg:flex items-center justify-center text-xs text-pink-600/60" title="Drag artwork here">
+          <div className="absolute -right-50 top-40 w-32 h-32 bg-pink-100/40 border-2 border-dashed border-pink-400/50 hidden lg:flex items-center justify-center text-xs text-pink-600/60" title="Drag artwork here">
             Doodle
           </div>
         </div>
