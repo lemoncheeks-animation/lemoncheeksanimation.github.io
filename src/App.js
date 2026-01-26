@@ -30,7 +30,7 @@ export default function AnimationStudio() {
       border: '4px solid transparent',
       borderImageSource: `url(${border})`,
       borderImageSlice: '6 fill',
-      borderImageRepeat: 'round'
+      borderImageRepeat: 'repeat'
     }}>
       <FloatingSpheres />
       {/* Notebook paper lines background */}
