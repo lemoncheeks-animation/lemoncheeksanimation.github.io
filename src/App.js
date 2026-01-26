@@ -155,7 +155,7 @@ export default function AnimationStudio() {
               Art
             </div>
 
-            <div className="space-y-4 text-lg text-orange-800/70 leading-relaxed font-josefin-sans">
+            <div className="space-y-4 text-lg text-orange-800/70 leading-relaxed font-lexend">
               <p>
                 Welcome! Lemoncheeks Animation Cooperative is a worker cooperative, 
                 with a mission to tell inclusive, original stories through animation. 
