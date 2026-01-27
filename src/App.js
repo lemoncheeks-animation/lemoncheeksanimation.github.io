@@ -166,32 +166,33 @@ export default function AnimationStudio() {
           {/* Layer 2 (another background paper, slightly rotated differently) */}
           <div className="absolute inset-0 bg-red-50/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
 
+          <img src={characters} alt="Character artwork" className="absolute bottom-28 -right-40 w-4/5 object-contain rotate-6 z-20" />
           {/* Project Card */}
           <div className="relative bg-gradient-to-br from-pink-50/60 to-red-50/60 border-4 border-pink-200/50 shadow-xl rounded-lg overflow-hidden z-10" style={textureStyle}>
             {/* Large artwork placeholder for project image/scene */}
-            <img src={project_artwork} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-4xl mt-8 mb-4" />
-            <div className="p-8 md:p-12">
+            <img src={project_artwork} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-md mt-8 mb-4" />
+            <div className="p-8 md:p-12 relative">
               <h3 className="text-3xl font-bold mb-4 text-pink-900/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.3)'
               }}>Projects</h3>
               
-               <img src={characters} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mt-8 mb-4" />
+              <div className="w-full">
+                  <p className="text-lg text-pink-900/70 leading-relaxed mb-6 font-nunito">
+                    Our animated short film is currently in production! 
 
-              <p className="text-lg text-pink-900/70 leading-relaxed mb-6 font-nunito">
-                Our animated short film is currently in production! 
-
-                Our story will explore the small, tender complexities of bicultural identity and
-                intergenerational love between parent and child.
-                
-                This short explores questions like - 
-                What does it mean to grow up in two cultures at once? 
-                How do both love and misunderstanding 
-                coexist between an immigrant parent and their child? 
-                What are the small rituals and idiosyncrasies that carry whole histories?
-              </p>
-              <p className="text-pink-800/70 leading-relaxed mb-4 font-nunito">
-                Stay tuned, more to come! We can't wait to share our short film and our journey with you!
-              </p>
+                    Our story will explore the small, tender complexities of bicultural identity and
+                    intergenerational love between parent and child.
+                    </p>
+                    <p>
+                    This short explores questions like - 
+                    What does it mean to grow up in two cultures at once? 
+                    How do both love and misunderstanding 
+                    coexist between an immigrant parent and their child? 
+                    What are the small rituals and idiosyncrasies that carry whole histories?
+                  </p>
+                  <p className="text-pink-800/70 leading-relaxed mb-4 font-nunito">
+                  </p>
+              </div>
             </div>
           </div>
         </div>
