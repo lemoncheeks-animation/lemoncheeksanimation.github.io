@@ -20,18 +20,41 @@ export default function AnimationStudio() {
 
   return (
     <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden">
-      {/* Responsive Border Frame - using background instead of borderImage for Chrome compatibility */}
+      {/* Responsive Border Frame - 4 divs showing corners/edges of original image */}
+      {/* Top border */}
       <div
-        className="fixed inset-0 pointer-events-none z-0 hidden md:block"
+        className="fixed top-0 left-0 right-0 h-[40px] pointer-events-none z-0 hidden md:block"
         style={{
-          boxSizing: 'border-box',
           backgroundImage: `url(${border})`,
-          backgroundSize: '60px 60px',
-          backgroundRepeat: 'repeat',
-          WebkitMaskImage: 'linear-gradient(to right, black 40px, transparent 40px, transparent calc(100% - 40px), black calc(100% - 40px)), linear-gradient(to bottom, black 40px, transparent 40px, transparent calc(100% - 40px), black calc(100% - 40px))',
-          WebkitMaskComposite: 'source-over',
-          maskImage: 'linear-gradient(to right, black 40px, transparent 40px, transparent calc(100% - 40px), black calc(100% - 40px)), linear-gradient(to bottom, black 40px, transparent 40px, transparent calc(100% - 40px), black calc(100% - 40px))',
-          maskComposite: 'add'
+          backgroundSize: '100vw auto',
+          backgroundPosition: 'top center'
+        }}
+      />
+      {/* Bottom border */}
+      <div
+        className="fixed bottom-0 left-0 right-0 h-[40px] pointer-events-none z-0 hidden md:block"
+        style={{
+          backgroundImage: `url(${border})`,
+          backgroundSize: '100vw auto',
+          backgroundPosition: 'bottom center'
+        }}
+      />
+      {/* Left border */}
+      <div
+        className="fixed top-[40px] bottom-[40px] left-0 w-[40px] pointer-events-none z-0 hidden md:block"
+        style={{
+          backgroundImage: `url(${border})`,
+          backgroundSize: 'auto 100vh',
+          backgroundPosition: 'left center'
+        }}
+      />
+      {/* Right border */}
+      <div
+        className="fixed top-[40px] bottom-[40px] right-0 w-[40px] pointer-events-none z-0 hidden md:block"
+        style={{
+          backgroundImage: `url(${border})`,
+          backgroundSize: 'auto 100vh',
+          backgroundPosition: 'right center'
         }}
       />
       
