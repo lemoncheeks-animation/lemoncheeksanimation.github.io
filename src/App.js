@@ -20,18 +20,22 @@ export default function AnimationStudio() {
 
   return (
     <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden">
-      {/* Responsive Border Frame - hidden on mobile */}
-      <div 
+      {/* Responsive Border Frame - using background instead of borderImage for Chrome compatibility */}
+      <div
         className="fixed inset-0 pointer-events-none z-0 hidden md:block"
         style={{
-          border: '40px solid transparent',
-          borderImage: `url(${border}) 60 fill`,
-          borderImageRepeat: 'repeat',
-          boxSizing: 'border-box'
+          boxSizing: 'border-box',
+          backgroundImage: `url(${border})`,
+          backgroundSize: '60px 60px',
+          backgroundRepeat: 'repeat',
+          WebkitMaskImage: 'linear-gradient(to right, black 40px, transparent 40px, transparent calc(100% - 40px), black calc(100% - 40px)), linear-gradient(to bottom, black 40px, transparent 40px, transparent calc(100% - 40px), black calc(100% - 40px))',
+          WebkitMaskComposite: 'source-over',
+          maskImage: 'linear-gradient(to right, black 40px, transparent 40px, transparent calc(100% - 40px), black calc(100% - 40px)), linear-gradient(to bottom, black 40px, transparent 40px, transparent calc(100% - 40px), black calc(100% - 40px))',
+          maskComposite: 'add'
         }}
       />
       
-      <FloatingSpheres />
+<FloatingSpheres />
       {/* Notebook paper lines background */}
       <div className="fixed inset-0 opacity-20 pointer-events-none" style={{
         backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(150,150,150,0.15) 29px, rgba(150,150,150,0.15) 30px)`
