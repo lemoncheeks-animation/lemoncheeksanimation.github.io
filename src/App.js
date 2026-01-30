@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Film, Heart, Instagram, Twitter, Youtube } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, Film, Instagram, Twitter, Youtube } from 'lucide-react';
 import FloatingSpheres from './FloatingSpheres';
 import border from './media/border2.jpg';
 import team_photo1 from './media/team_photo1.jpg';
@@ -10,38 +10,7 @@ import project_artwork from './media/project_photo.jpg';
 import characters from './media/characters.png';
 
 export default function AnimationStudio() {
-  const [activeSection, setActiveSection] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'our-team', 'contact'];
-      
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            setActiveSection(sectionId);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial position
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (section) => {
-    setMenuOpen(false);
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   // Paper texture overlay
   const textureStyle = {
@@ -88,18 +57,13 @@ export default function AnimationStudio() {
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-6">
               {['home', 'about', 'projects', 'our-team', 'contact'].map((section) => (
-                <button
+                <a
                   key={section}
-                  type="button"
-                  onClick={() => scrollToSection(section)}
-                  className={`font-bold transition-all px-3 py-1 font-josefin-sans ${
-                    activeSection === section
-                      ? 'text-orange-900/80 underline'
-                      : 'text-orange-800/60 hover:text-orange-900/80'
-                  }`}
+                  href={`#${section}`}
+                  className="font-bold transition-all px-3 py-1 font-josefin-sans text-orange-800/60 hover:text-orange-900/80"
                 >
                   {section === 'our-team' ? 'our team' : section}
-                </button>
+                </a>
               ))}
             </div>
 
@@ -114,25 +78,21 @@ export default function AnimationStudio() {
           {menuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-2">
               {['home', 'about', 'projects', 'our-team', 'contact'].map((section) => (
-                <button
+                <a
                   key={section}
-                  type="button"
-                  onClick={() => scrollToSection(section)}
-                  className={`block w-full text-left px-3 py-2 font-bold transition-all font-josefin-sans ${
-                    activeSection === section
-                      ? 'text-orange-900/80 underline'
-                      : 'text-orange-800/60'
-                  }`}
+                  href={`#${section}`}
+                  onClick={() => setMenuOpen(false)}
+                  className="block w-full text-left px-3 py-2 font-bold transition-all font-josefin-sans text-orange-800/60"
                 >
                   {section === 'our-team' ? 'our team' : section}
-                </button>
+                </a>
               ))}
             </div>
           )}
         </div>
       </nav>
 
-      {/* Home Section */}
+      {/* Home Section - PRESERVED EXACTLY AS ORIGINAL */}
       <section id="home" className="relative w-full max-w-6xl mx-auto pt-16 md:pt-20 px-4 text-center">
         {/* Layer 1 (background paper, slightly rotated) */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95%] h-[60vh] md:h-[90vh] max-h-[600px] bg-orange-50/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
@@ -148,7 +108,7 @@ export default function AnimationStudio() {
         <img src={style_frame} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mt-4 md:mt-8 mb-2 md:mb-4" />
       </section>
 
-      {/* About Section */}
+      {/* About Section - Made Responsive */}
       <section id="about" className="py-8 md:py-16 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
@@ -156,14 +116,14 @@ export default function AnimationStudio() {
           {/* Layer 3 (new paper layer) */}
           <div className="absolute inset-0 bg-pink-100/70 rounded-lg transform -rotate-1 shadow-xl z-0" style={textureStyle}></div>
 
-          <div className="relative bg-gradient-to-br from-green-50/60 to-teal-50/60 shadow-xl p-4 md:p-8 lg:p-12 border-2 md:border-4 border-green-200/50 z-10 w-full rounded-lg" style={textureStyle}>
+          <div className="relative bg-gradient-to-br from-green-50/60 to-teal-50/60 shadow-xl p-6 sm:p-8 md:p-10 lg:p-12 border-2 md:border-4 border-green-200/50 z-10 w-full rounded-lg" style={textureStyle}>
             <div className="flex items-center gap-3 mb-4 md:mb-6">
-              <h2 className="text-2xl md:text-4xl font-bold text-orange-800/70 font-josefin-sans" style={{
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-800/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
               }}>About Us</h2>
             </div>
 
-            <div className="space-y-3 md:space-y-4 text-sm md:text-lg text-orange-800/70 leading-relaxed font-lexend">
+            <div className="space-y-3 md:space-y-4 text-base sm:text-lg text-orange-800/70 leading-relaxed font-lexend">
               <p>
                 Welcome! Lemoncheeks Animation Cooperative is a worker cooperative, 
                 with a mission to tell inclusive, original stories through animation. 
@@ -179,7 +139,7 @@ export default function AnimationStudio() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section - Made Responsive */}
       <section id="projects" className="py-8 md:py-16 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
@@ -191,26 +151,34 @@ export default function AnimationStudio() {
           <img 
             src={characters} 
             alt="Character artwork" 
-            className="absolute -top-32 -right-20 w-64 object-contain rotate-6 z-20 sm:block md:-top-40 md:-right-32 md:w-80 lg:-top-60 lg:-right-60 lg:w-96 xl:-top-80 xl:-right-80 xl:w-full xl:max-w-2xl opacity-90"
+            className="hidden sm:block absolute -top-24 -right-16 w-48 sm:w-56 md:w-72 lg:w-80 xl:w-96 object-contain rotate-6 z-20 opacity-90"
+            style={{
+              top: 'clamp(-6rem, -15vw, -10rem)',
+              right: 'clamp(-4rem, -10vw, -15rem)'
+            }}
           />
           
           {/* Project Card */}
           <div className="relative bg-gradient-to-br from-pink-50/60 to-red-50/60 border-2 md:border-4 border-pink-200/50 shadow-xl rounded-lg overflow-hidden z-10 w-full" style={textureStyle}>
             {/* Large artwork placeholder for project image/scene */}
-            <img src={project_artwork} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-md mt-2 md:mt-8 mb-1 md:mb-4" />
-            <div className="p-4 md:p-8 lg:p-12 relative">
-              <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 text-pink-900/70 font-josefin-sans" style={{
+            <img 
+              src={project_artwork} 
+              alt="Decorative frame" 
+              className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl mt-4 sm:mt-6 md:mt-8 mb-2 sm:mb-3 md:mb-4" 
+            />
+            <div className="p-6 sm:p-8 md:p-10 lg:p-12 relative">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-pink-900/70 font-josefin-sans" style={{
                 textShadow: '2px 2px 0px rgba(255,255,255,0.3)'
               }}>Projects</h3>
               
               <div className="w-full">
-                <p className="text-sm md:text-lg text-pink-900/70 leading-relaxed mb-4 md:mb-6 font-nunito">
+                <p className="text-base sm:text-lg text-pink-900/70 leading-relaxed mb-4 md:mb-6 font-nunito">
                   Our animated short film is currently in production! 
 
                   Our story will explore the small, tender complexities of bicultural identity and
                   intergenerational love between parent and child.
                 </p>
-                <p className="text-sm md:text-lg text-pink-900/70 leading-relaxed mb-4 md:mb-6 font-nunito">
+                <p className="text-base sm:text-lg text-pink-900/70 leading-relaxed mb-4 md:mb-6 font-nunito">
                   This short explores questions like - 
                   What does it mean to grow up in two cultures at once? 
                   How do both love and misunderstanding 
@@ -223,11 +191,11 @@ export default function AnimationStudio() {
         </div>
       </section>
 
-      {/* Founders Section */}
+      {/* Founders Section - Made Responsive */}
       <section id="our-team" className="py-8 md:py-16 px-4 relative">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6 md:mb-12">
-            <h2 className="text-2xl md:text-4xl font-bold text-pink-900/70 inline-block font-josefin-sans" style={{
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-pink-900/70 inline-block font-josefin-sans" style={{
               textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
             }}>🍋hello world!🍋</h2>
           </div>
@@ -239,74 +207,78 @@ export default function AnimationStudio() {
             <div className="absolute inset-0 bg-pink-100/70 rounded-lg transform rotate-1 shadow-lg z-0" style={textureStyle}></div>
 
             {/* Main content card */}
-            <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-2 md:border-4 border-orange-200/50 shadow-xl p-4 md:p-6 lg:p-8 w-full flex flex-col lg:flex-row items-center lg:items-start gap-4 md:gap-6 rounded-lg z-10" style={textureStyle}>
+            <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-2 md:border-4 border-orange-200/50 shadow-xl p-6 sm:p-8 md:p-10 lg:p-12 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 md:gap-8 rounded-lg z-10" style={textureStyle}>
               {/* Picture Left */}
               <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
-                <div className="relative w-full max-w-sm md:max-w-md h-48 sm:h-64 md:h-80 lg:h-96 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={{...textureStyle, border: '8px solid transparent', borderImageSlice: '8 fill', borderImageRepeat: 'stretch'}}>
+                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-56 sm:h-64 md:h-80 lg:h-96 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={{...textureStyle, border: '8px solid transparent', borderImageSlice: '8 fill', borderImageRepeat: 'stretch'}}>
                   <img src={team_photo1} alt="Team" className="absolute inset-0 w-full h-full object-cover" />
                   <img src={team_photo2} alt="Team" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
                 </div>
               </div>
               {/* Words Right */}
               <div className="relative w-full lg:w-1/2 z-10" style={textureStyle}>
-                <h3 className="text-lg md:text-2xl font-bold text-left mb-2 text-orange-900/80 font-josefin-sans">Our Team</h3>
-                <p className="text-sm md:text-lg text-orange-800/70 text-left leading-relaxed font-nunito">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-left mb-2 sm:mb-3 text-orange-900/80 font-josefin-sans">Our Team</h3>
+                <p className="text-base sm:text-lg text-orange-800/70 text-left leading-relaxed font-nunito">
                   We're Jackie, Frank, and Lauren, 3 California based artists (hello from SF and LA!) 
                   Our final secret member is Freddy the cat. He has bad teeth but he's still giving you a smile:) 
                 </p>
-                <img src={freddy} alt="freddy" className="w-20 md:w-24 lg:w-32 absolute -bottom-32 md:-bottom-40 lg:-bottom-60 right-2 md:right-3" />
+                <img 
+                  src={freddy} 
+                  alt="freddy" 
+                  className="w-20 sm:w-24 md:w-28 lg:w-32 absolute -bottom-24 sm:-bottom-32 md:-bottom-40 lg:-bottom-60 right-2 md:right-3" 
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Social Links Section */}
-      <section id="contact" className="py-8 md:py-16 px-4 relative mt-32 md:mt-40 lg:mt-48">
+      {/* Social Links Section - Made Responsive */}
+      <section id="contact" className="py-8 md:py-16 px-4 relative mt-24 sm:mt-32 md:mt-40 lg:mt-48">
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
           <div className="absolute inset-0 bg-blue-50/70 rounded-lg transform rotate-2 shadow-lg z-0" style={textureStyle}></div>
           {/* Layer 2 (another background paper, slightly rotated differently) */}
           <div className="absolute inset-0 bg-purple-50/70 rounded-lg transform -rotate-3 shadow-lg z-0" style={textureStyle}></div>
 
-          <div className="relative max-w-4xl mx-auto text-center p-4 md:p-8 lg:p-12 rounded-lg shadow-xl z-10 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
-            <h2 className="text-2xl md:text-4xl font-bold text-orange-900/80 mb-4 md:mb-6 font-josefin-sans" style={{
+          <div className="relative max-w-4xl mx-auto text-center p-6 sm:p-8 md:p-10 lg:p-12 rounded-lg shadow-xl z-10 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-900/80 mb-4 md:mb-6 font-josefin-sans" style={{
               textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
             }}>Stay Connected</h2>
-            <div className="flex justify-center gap-3 md:gap-6">
+            <div className="flex justify-center gap-4 sm:gap-6">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-200/50 hover:bg-yellow-300/60 p-2 md:p-4 border-2 md:border-3 border-yellow-400/50 shadow-lg transition-all transform hover:scale-110"
+                className="bg-yellow-200/50 hover:bg-yellow-300/60 p-3 sm:p-4 border-2 md:border-3 border-yellow-400/50 shadow-lg transition-all transform hover:scale-110"
                 style={textureStyle}
               >
-                <Instagram className="w-5 h-5 md:w-8 md:h-8 text-orange-900/70" />
+                <Instagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-900/70" />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-teal-200/50 hover:bg-teal-300/60 p-2 md:p-4 border-2 md:border-3 border-teal-400/50 shadow-lg transition-all transform hover:scale-110"
+                className="bg-teal-200/50 hover:bg-teal-300/60 p-3 sm:p-4 border-2 md:border-3 border-teal-400/50 shadow-lg transition-all transform hover:scale-110"
                 style={textureStyle}
               >
-                <Twitter className="w-5 h-5 md:w-8 md:h-8 text-teal-900/70" />
+                <Twitter className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-teal-900/70" />
               </a>
               <a
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-300/50 hover:bg-red-400/60 p-2 md:p-4 border-2 md:border-3 border-red-500/50 shadow-lg transition-all transform hover:scale-110"
+                className="bg-red-300/50 hover:bg-red-400/60 p-3 sm:p-4 border-2 md:border-3 border-red-500/50 shadow-lg transition-all transform hover:scale-110"
                 style={textureStyle}
               >
-                <Youtube className="w-5 h-5 md:w-8 md:h-8 text-red-900/70" />
+                <Youtube className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-red-900/70" />
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer - Made Responsive */}
       <footer className="py-6 md:py-8 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-6xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
@@ -314,13 +286,13 @@ export default function AnimationStudio() {
           {/* Layer x (another background paper, slightly rotated differently) */}
           <div className="absolute inset-0 bg-orange-50/70 rounded-lg transform rotate-2 shadow-lg z-0" style={textureStyle}></div>
 
-          <div className="relative max-w-6xl mx-auto text-center p-4 md:p-8 rounded-lg shadow-xl z-10 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
+          <div className="relative max-w-6xl mx-auto text-center p-6 sm:p-8 rounded-lg shadow-xl z-10 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
             <div className="flex items-center justify-center gap-2 mb-3 md:mb-4">
-              <Film className="w-4 h-4 md:w-6 md:h-6 text-orange-700/60" />
-              <span className="text-sm md:text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks animation cooperative</span>
+              <Film className="w-5 h-5 sm:w-6 sm:h-6 text-orange-700/60" />
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks animation cooperative</span>
             </div>
-            <p className="font-bold font-nunito text-orange-900/80 text-xs md:text-base">© 2026 lemoncheeks animation cooperative. All rights reserved.</p>
-            <p className="text-orange-700/50 text-xs md:text-sm mt-2 font-nunito">Moving and grooving</p>
+            <p className="font-bold font-nunito text-orange-900/80 text-xs sm:text-sm md:text-base">© 2026 lemoncheeks animation cooperative. All rights reserved.</p>
+            <p className="text-orange-700/50 text-xs sm:text-sm mt-2 font-nunito">Moving and grooving</p>
           </div>
         </div>
       </footer>
