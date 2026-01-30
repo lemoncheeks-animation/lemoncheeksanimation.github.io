@@ -44,13 +44,7 @@ export default function AnimationStudio() {
       }}>
         <div className="max-w-6xl mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2 md:space-x-3">
-              {/* Logo */}
-              <img src={style_frame} alt="logo" className="w-10 h-10 md:w-12 md:h-12 bg-orange-200/40 flex items-center justify-center flex-shrink-0"
-                style={{
-                  clipPath: 'polygon(2% 5%, 8% 2%, 15% 4%, 22% 1%, 30% 3%, 38% 1%, 45% 4%, 52% 2%, 60% 5%, 68% 2%, 75% 4%, 82% 1%, 90% 3%, 95% 6%, 98% 12%, 99% 20%, 98% 28%, 100% 35%, 99% 43%, 98% 50%, 100% 58%, 99% 65%, 98% 72%, 100% 80%, 98% 88%, 95% 94%, 90% 97%, 82% 99%, 75% 96%, 68% 98%, 60% 95%, 52% 98%, 45% 96%, 38% 99%, 30% 97%, 22% 99%, 15% 96%, 8% 98%, 2% 95%)',
-                  border: '2px dashed rgba(251, 146, 60, 0.5)'
-                }} />
+            <div className="flex items-center">
               <span className="text-sm md:text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks animation cooperative</span>
             </div>
 
