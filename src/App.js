@@ -30,39 +30,39 @@ export default function AnimationStudio() {
           backgroundPosition: 'center'
         }}
       />
-      {/* Top border */}
+      {/* Top border - full width including corners */}
       <div
-        className="fixed top-0 left-0 right-0 h-[40px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 left-0 right-0 h-[60px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
-          backgroundSize: '100vw auto',
+          backgroundSize: 'max(100vw, 100vh * 1.05) auto',
           backgroundPosition: 'top center'
         }}
       />
-      {/* Bottom border */}
+      {/* Bottom border - full width including corners */}
       <div
-        className="fixed bottom-0 left-0 right-0 h-[40px] pointer-events-none z-30 hidden md:block"
+        className="fixed bottom-0 left-0 right-0 h-[60px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
-          backgroundSize: '100vw auto',
+          backgroundSize: 'max(100vw, 100vh * 1.05) auto',
           backgroundPosition: 'bottom center'
         }}
       />
-      {/* Left border */}
+      {/* Left border - between top and bottom */}
       <div
-        className="fixed top-[40px] bottom-[40px] left-0 w-[40px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-[60px] bottom-[60px] left-0 w-[60px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
-          backgroundSize: 'auto 100vh',
+          backgroundSize: 'auto max(100vh, 100vw * 0.95)',
           backgroundPosition: 'left center'
         }}
       />
-      {/* Right border */}
+      {/* Right border - between top and bottom */}
       <div
-        className="fixed top-[40px] bottom-[40px] right-0 w-[40px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-[60px] bottom-[60px] right-0 w-[60px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
-          backgroundSize: 'auto 100vh',
+          backgroundSize: 'auto max(100vh, 100vw * 0.95)',
           backgroundPosition: 'right center'
         }}
       />
