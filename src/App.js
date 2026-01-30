@@ -20,10 +20,19 @@ export default function AnimationStudio() {
 
   return (
     <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden">
-      {/* Responsive Border Frame - 4 divs showing corners/edges of original image */}
+      {/* Responsive Border Frame - background fill + 4 edge divs */}
+      {/* Background fill from border image center */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0 hidden md:block"
+        style={{
+          backgroundImage: `url(${border})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
       {/* Top border */}
       <div
-        className="fixed top-0 left-0 right-0 h-[40px] pointer-events-none z-0 hidden md:block"
+        className="fixed top-0 left-0 right-0 h-[40px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
           backgroundSize: '100vw auto',
@@ -32,7 +41,7 @@ export default function AnimationStudio() {
       />
       {/* Bottom border */}
       <div
-        className="fixed bottom-0 left-0 right-0 h-[40px] pointer-events-none z-0 hidden md:block"
+        className="fixed bottom-0 left-0 right-0 h-[40px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
           backgroundSize: '100vw auto',
@@ -41,7 +50,7 @@ export default function AnimationStudio() {
       />
       {/* Left border */}
       <div
-        className="fixed top-[40px] bottom-[40px] left-0 w-[40px] pointer-events-none z-0 hidden md:block"
+        className="fixed top-[40px] bottom-[40px] left-0 w-[40px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
           backgroundSize: 'auto 100vh',
@@ -50,7 +59,7 @@ export default function AnimationStudio() {
       />
       {/* Right border */}
       <div
-        className="fixed top-[40px] bottom-[40px] right-0 w-[40px] pointer-events-none z-0 hidden md:block"
+        className="fixed top-[40px] bottom-[40px] right-0 w-[40px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
           backgroundSize: 'auto 100vh',
