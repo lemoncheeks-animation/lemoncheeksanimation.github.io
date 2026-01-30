@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, Film, Heart, Instagram, Twitter, Youtube } from 'lucide-react';
 import FloatingSpheres from './FloatingSpheres';
 import border from './media/border2.jpg';
@@ -13,11 +13,34 @@ export default function AnimationStudio() {
   const [activeSection, setActiveSection] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'projects', 'our-team', 'contact'];
+      
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (section) => {
-    setActiveSection(section);
     setMenuOpen(false);
-    const targetId = section === 'home' ? 'welcome' : section;
-    document.getElementById(targetId)?.scrollIntoView({ behavior: 'auto' });
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   // Paper texture overlay
@@ -67,6 +90,7 @@ export default function AnimationStudio() {
               {['home', 'about', 'projects', 'our-team', 'contact'].map((section) => (
                 <button
                   key={section}
+                  type="button"
                   onClick={() => scrollToSection(section)}
                   className={`font-bold transition-all px-3 py-1 font-josefin-sans ${
                     activeSection === section
@@ -80,6 +104,7 @@ export default function AnimationStudio() {
             </div>
 
             <button
+              type="button"
               className="md:hidden text-orange-900/70"
               onClick={() => setMenuOpen(!menuOpen)}
             >
@@ -91,8 +116,13 @@ export default function AnimationStudio() {
               {['home', 'about', 'projects', 'our-team', 'contact'].map((section) => (
                 <button
                   key={section}
+                  type="button"
                   onClick={() => scrollToSection(section)}
-                  className="block w-full text-left py-2 px-3 text-orange-800/70 font-bold font-josefin-sans"
+                  className={`block w-full text-left px-3 py-2 font-bold transition-all font-josefin-sans ${
+                    activeSection === section
+                      ? 'text-orange-900/80 underline'
+                      : 'text-orange-800/60'
+                  }`}
                 >
                   {section === 'our-team' ? 'our team' : section}
                 </button>
@@ -102,7 +132,8 @@ export default function AnimationStudio() {
         </div>
       </nav>
 
-      <div id="welcome" className="relative w-full max-w-6xl mx-auto pt-16 md:pt-20 px-4 text-center">
+      {/* Home Section */}
+      <section id="home" className="relative w-full max-w-6xl mx-auto pt-16 md:pt-20 px-4 text-center">
         {/* Layer 1 (background paper, slightly rotated) */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95%] h-[60vh] md:h-[90vh] max-h-[600px] bg-orange-50/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
         {/* Layer 2 (background paper, slightly rotated differently) */}
@@ -115,18 +146,6 @@ export default function AnimationStudio() {
         <div className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[99%] h-[60vh] md:h-[90vh] max-h-[600px] bg-yellow-100/70 rounded-lg transform rotate-2 shadow-xl z-0" style={textureStyle}></div>
 
         <img src={style_frame} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full lg:max-w-6xl mt-4 md:mt-8 mb-2 md:mb-4" />
-      </div>
-
-      {/* Hero Section */}
-      <section id="home" className="pt-8 md:pt-16 pb-8 md:pb-16 px-4 relative">
-        <div className="flex justify-center relative z-10 w-full max-w-6xl mx-auto min-h-[20vh] md:min-h-[40vh]">
-          {/* Layer 1 (background paper, slightly rotated) */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-[90%] min-h-[200px] md:min-h-[300px] bg-red-50/70 rounded-lg transform rotate-3 shadow-lg z-0" style={textureStyle}></div>
-          {/* Layer 2 (another background paper, slightly rotated differently) */}
-          <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[92%] h-[92%] min-h-[200px] md:min-h-[300px] bg-orange-50/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
-          {/* Layer 3 (new paper layer) */}
-          <div className="absolute top-[20px] left-1/2 -translate-x-1/2 w-[94%] h-[94%] min-h-[200px] md:min-h-[300px] bg-blue-50/70 rounded-lg transform rotate-1 shadow-xl z-0" style={textureStyle}></div>
-        </div>
       </section>
 
       {/* About Section */}
