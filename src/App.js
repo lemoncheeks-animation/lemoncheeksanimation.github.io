@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Film, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Menu, X, Film, Instagram, Linkedin } from 'lucide-react';
 import FloatingSpheres from './FloatingSpheres';
 import border from './media/border2.jpg';
 import team_photo1 from './media/team_photo1.jpg';
@@ -274,10 +274,10 @@ export default function AnimationStudio() {
           <div className="relative max-w-4xl mx-auto text-center p-6 sm:p-8 md:p-10 lg:p-12 rounded-lg shadow-xl z-10 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.7)', ...textureStyle }}>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-orange-900/80 mb-4 md:mb-6 font-josefin-sans" style={{
               textShadow: '2px 2px 0px rgba(255,255,255,0.4)'
-            }}>Stay Connected</h2>
+            }}>Stay Connected!</h2>
             <div className="flex justify-center gap-4 sm:gap-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/lemoncheeks_animation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-yellow-200/50 hover:bg-yellow-300/60 p-3 sm:p-4 border-2 md:border-3 border-yellow-400/50 shadow-lg transition-all transform hover:scale-110"
@@ -286,22 +286,13 @@ export default function AnimationStudio() {
                 <Instagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-900/70" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/company/lemoncheeksanimation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-teal-200/50 hover:bg-teal-300/60 p-3 sm:p-4 border-2 md:border-3 border-teal-400/50 shadow-lg transition-all transform hover:scale-110"
+                className="bg-blue-200/50 hover:bg-blue-300/60 p-3 sm:p-4 border-2 md:border-3 border-blue-400/50 shadow-lg transition-all transform hover:scale-110"
                 style={textureStyle}
               >
-                <Twitter className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-teal-900/70" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-red-300/50 hover:bg-red-400/60 p-3 sm:p-4 border-2 md:border-3 border-red-500/50 shadow-lg transition-all transform hover:scale-110"
-                style={textureStyle}
-              >
-                <Youtube className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-red-900/70" />
+                <Linkedin className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-blue-900/70" />
               </a>
             </div>
           </div>
