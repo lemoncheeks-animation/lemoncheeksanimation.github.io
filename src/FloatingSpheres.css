@@ -1,8 +1,8 @@
 .sphere-container {
   position: fixed;
-  top: 60px;
-  left: 40px;
-  right: 40px;
+  top: 69px;
+  left: 54px;
+  right: 54px;
   bottom: 0;
   overflow: hidden;
   z-index: 10;
@@ -10,6 +10,33 @@
   transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+/* lg breakpoint (1024px) */
+@media (min-width: 1024px) {
+  .sphere-container {
+    top: 84px;
+    left: 69px;
+    right: 69px;
+  }
+}
+
+/* xl breakpoint (1280px) */
+@media (min-width: 1280px) {
+  .sphere-container {
+    top: 99px;
+    left: 84px;
+    right: 84px;
+  }
+}
+
+/* 2xl breakpoint (1536px) */
+@media (min-width: 1536px) {
+  .sphere-container {
+    top: 114px;
+    left: 99px;
+    right: 99px;
+  }
 }
 
 .sphere {
