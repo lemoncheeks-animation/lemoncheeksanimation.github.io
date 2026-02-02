@@ -30,15 +30,6 @@ export default function AnimationStudio() {
         }}
       />
       {/* Responsive Border Frame */}
-      {/* Top border - full width including corners */}
-      <div
-        className="fixed top-0 left-0 right-0 h-[69px] lg:h-[84px] xl:h-[99px] 2xl:h-[114px] pointer-events-none z-30 hidden md:block"
-        style={{
-          backgroundImage: `url(${border})`,
-          backgroundSize: 'max(100vw, 100vh * 0.9) auto',
-          backgroundPosition: 'top center'
-        }}
-      />
       {/* Left border - from top to bottom */}
       <div
         className="fixed top-0 bottom-0 left-0 w-[54px] lg:w-[69px] xl:w-[84px] 2xl:w-[99px] pointer-events-none z-30 hidden md:block"
