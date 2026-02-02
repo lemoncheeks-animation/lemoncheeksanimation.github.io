@@ -19,17 +19,17 @@ export default function AnimationStudio() {
   };
 
   return (
-    <div className="min-h-screen bg-orange-50/20 relative overflow-x-hidden">
-      {/* Responsive Border Frame - background fill + 4 edge divs */}
+    <div className="min-h-screen relative overflow-x-hidden" style={{ backgroundColor: '#f8e4dc' }}>
       {/* Background fill from border image center */}
       <div
         className="fixed inset-0 pointer-events-none z-0 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
-          backgroundSize: 'cover',
+          backgroundSize: '110%',
           backgroundPosition: 'center'
         }}
       />
+      {/* Responsive Border Frame */}
       {/* Top border - full width including corners */}
       <div
         className="fixed top-0 left-0 right-0 h-[60px] pointer-events-none z-30 hidden md:block"
@@ -39,31 +39,24 @@ export default function AnimationStudio() {
           backgroundPosition: 'top center'
         }}
       />
-      {/* Bottom border - full width including corners */}
+      {/* Left border - from top to bottom */}
       <div
-        className="fixed bottom-0 left-0 right-0 h-[60px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 bottom-0 left-0 w-[60px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
-          backgroundSize: 'max(100vw, 100vh * 1.05) auto',
-          backgroundPosition: 'bottom center'
+          backgroundSize: 'auto 100%',
+          backgroundPosition: 'left top',
+          backgroundRepeat: 'no-repeat'
         }}
       />
-      {/* Left border - between top and bottom */}
+      {/* Right border - from top to bottom */}
       <div
-        className="fixed top-[60px] bottom-[60px] left-0 w-[60px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 bottom-0 right-0 w-[60px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
-          backgroundSize: 'auto max(100vh, 100vw * 0.95)',
-          backgroundPosition: 'left center'
-        }}
-      />
-      {/* Right border - between top and bottom */}
-      <div
-        className="fixed top-[60px] bottom-[60px] right-0 w-[60px] pointer-events-none z-30 hidden md:block"
-        style={{
-          backgroundImage: `url(${border})`,
-          backgroundSize: 'auto max(100vh, 100vw * 0.95)',
-          backgroundPosition: 'right center'
+          backgroundSize: 'auto 100%',
+          backgroundPosition: 'right top',
+          backgroundRepeat: 'no-repeat'
         }}
       />
       
