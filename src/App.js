@@ -247,8 +247,17 @@ export default function AnimationStudio() {
         </div>
       </section>
 
+      {/* Characters image between Our Team and Contact */}
+      <div className="flex justify-center -my-8 md:-my-12">
+        <img
+          src={characters}
+          alt="Character artwork"
+          className="w-64 sm:w-80 md:w-96 lg:w-[28rem] object-contain opacity-90"
+        />
+      </div>
+
       {/* Social Links Section - Made Responsive */}
-      <section id="contact" className="py-8 md:py-16 px-4 relative mt-24 sm:mt-32 md:mt-40 lg:mt-48">
+      <section id="contact" className="py-8 md:py-16 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
           <div className="absolute inset-0 bg-blue-50/70 rounded-lg transform rotate-2 shadow-lg z-0" style={textureStyle}></div>
