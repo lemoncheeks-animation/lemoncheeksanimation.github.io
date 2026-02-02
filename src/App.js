@@ -8,6 +8,7 @@ import freddy from './media/freddy.png';
 import style_frame from './media/style_frame.png';
 import project_artwork from './media/project_photo.jpg';
 import characters from './media/characters.png';
+import tomato from './media/tomato.png';
 
 export default function AnimationStudio() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -161,13 +162,13 @@ export default function AnimationStudio() {
           {/* Layer 2 (another background paper, slightly rotated differently) */}
           <div className="absolute inset-0 bg-red-50/70 rounded-lg transform -rotate-2 shadow-lg z-0" style={textureStyle}></div>
 
-          {/* Character artwork - responsive positioning */}
-          <img 
-            src={characters} 
-            alt="Character artwork" 
-            className="hidden sm:block absolute -top-24 -right-16 w-48 sm:w-56 md:w-72 lg:w-80 xl:w-96 object-contain rotate-6 z-20 opacity-90"
+          {/* Tomato artwork - responsive positioning */}
+          <img
+            src={tomato}
+            alt="Tomato artwork"
+            className="hidden lg:block absolute w-48 sm:w-56 md:w-72 lg:w-80 xl:w-96 object-contain rotate-6 z-20 opacity-90"
             style={{
-              top: 'clamp(-6rem, -15vw, -10rem)',
+              top: 'calc(clamp(-6rem, -15vw, -10rem) - 125px)',
               right: 'clamp(-4rem, -10vw, -15rem)'
             }}
           />
@@ -239,7 +240,7 @@ export default function AnimationStudio() {
                 <img 
                   src={freddy} 
                   alt="freddy" 
-                  className="w-20 sm:w-24 md:w-28 lg:w-32 absolute -bottom-24 sm:-bottom-32 md:-bottom-40 lg:-bottom-60 right-2 md:right-3" 
+                  className="w-20 sm:w-24 md:w-28 lg:w-32 absolute -bottom-34 sm:-bottom-32 md:-bottom-40 lg:-bottom-60 right-2 md:right-3" 
                 />
               </div>
             </div>
@@ -248,7 +249,7 @@ export default function AnimationStudio() {
       </section>
 
       {/* Characters image between Our Team and Contact */}
-      <div className="flex justify-center -my-8 md:-my-12">
+      <div className="flex justify-center -my-16 md:-my-24">
         <img
           src={characters}
           alt="Character artwork"
