@@ -41,7 +41,7 @@ export default function AnimationStudio() {
       />
       {/* Left border - from top to bottom */}
       <div
-        className="fixed top-0 bottom-0 left-0 w-[60px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 bottom-0 left-0 w-[40px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
           backgroundSize: 'auto 100%',
@@ -51,7 +51,7 @@ export default function AnimationStudio() {
       />
       {/* Right border - from top to bottom */}
       <div
-        className="fixed top-0 bottom-0 right-0 w-[60px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 bottom-0 right-0 w-[40px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
           backgroundSize: 'auto 100%',
