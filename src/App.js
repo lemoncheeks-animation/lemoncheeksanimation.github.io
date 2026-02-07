@@ -127,7 +127,7 @@ export default function AnimationStudio() {
       {/* About Section - Made Responsive */}
       <section id="about" className="py-8 md:py-16 px-4 relative">
         <div className="flex justify-center mb-4 md:mb-6">
-          <img src={logo} alt="lemoncheeks logo" className="h-16 md:h-24 object-contain relative z-10" />
+          <img src={logo} alt="lemoncheeks logo" className="h-16 md:h-24 object-contain relative z-10 transition-transform duration-300 hover:rotate-12" />
         </div>
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
@@ -257,7 +257,7 @@ export default function AnimationStudio() {
         <img
           src={characters}
           alt="Character artwork"
-          className="w-64 sm:w-80 md:w-96 lg:w-[28rem] object-contain opacity-90"
+          className="w-64 sm:w-80 md:w-96 lg:w-[28rem] object-contain opacity-90 transition-transform duration-300 hover:rotate-6"
         />
       </div>
 
