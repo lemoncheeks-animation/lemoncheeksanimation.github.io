@@ -9,6 +9,7 @@ import style_frame from './media/style_frame.png';
 import project_artwork from './media/project_photo.jpg';
 import characters from './media/characters.png';
 import tomato from './media/tomato.png';
+import logo from './media/logo.png';
 
 export default function AnimationStudio() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,7 +64,7 @@ export default function AnimationStudio() {
         clipPath: 'polygon(0 0, 2% 1%, 5% 0, 8% 2%, 12% 1%, 15% 0, 18% 1%, 22% 2%, 25% 0, 28% 1%, 32% 2%, 35% 1%, 38% 0, 42% 2%, 45% 1%, 48% 0, 52% 1%, 55% 2%, 58% 0, 62% 1%, 65% 2%, 68% 1%, 72% 0, 75% 2%, 78% 1%, 82% 0, 85% 1%, 88% 2%, 92% 1%, 95% 0, 98% 2%, 100% 1%, 100% 92%, 98% 95%, 96% 93%, 94% 96%, 91% 94%, 88% 97%, 85% 95%, 82% 98%, 78% 96%, 75% 94%, 72% 97%, 68% 95%, 65% 98%, 62% 96%, 58% 94%, 55% 97%, 52% 95%, 48% 98%, 45% 96%, 42% 94%, 38% 97%, 35% 95%, 32% 98%, 28% 96%, 25% 94%, 22% 97%, 18% 95%, 15% 98%, 12% 96%, 8% 94%, 5% 97%, 2% 95%, 0 98%)',
         ...textureStyle
       }}>
-        <div className="max-w-6xl mx-auto px-4 py-3 md:py-4">
+        <div className="max-w-6xl mx-auto px-4 py-4 md:py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <span className="text-sm md:text-xl font-bold font-josefin-sans text-orange-900/80">lemoncheeks animation cooperative</span>
@@ -125,6 +126,9 @@ export default function AnimationStudio() {
 
       {/* About Section - Made Responsive */}
       <section id="about" className="py-8 md:py-16 px-4 relative">
+        <div className="flex justify-center mb-4 md:mb-6">
+          <img src={logo} alt="lemoncheeks logo" className="h-16 md:h-24 object-contain relative z-10" />
+        </div>
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
           <div className="absolute inset-0 bg-red-100/70 rounded-lg transform -rotate-3 shadow-lg z-0" style={textureStyle}></div>
