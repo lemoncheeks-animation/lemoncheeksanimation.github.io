@@ -10,6 +10,7 @@ import project_artwork from './media/project_photo.jpg';
 import characters from './media/characters.png';
 import tomato from './media/tomato.png';
 import logo from './media/logo.png';
+import poppy from './media/poppy.png';
 
 export default function AnimationStudio() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -127,7 +128,7 @@ export default function AnimationStudio() {
       {/* About Section - Made Responsive */}
       <section id="about" className="py-8 md:py-16 px-4 relative">
         <div className="flex justify-center mb-4 md:mb-6">
-          <img src={logo} alt="lemoncheeks logo" loading="lazy" className="h-16 md:h-24 object-contain relative z-10 transition-transform duration-300 hover:rotate-12" />
+          <img src={logo} alt="lemoncheeks logo" loading="lazy" className="h-16 md:h-24 object-contain relative z-0 transition-transform duration-300 hover:rotate-12" />
         </div>
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
@@ -158,6 +159,11 @@ export default function AnimationStudio() {
         </div>
       </section>
 
+      {/* Poppy between About and Projects */}
+      <div className="flex justify-center py-0 relative z-0">
+        <img src={poppy} alt="Poppy" loading="lazy" className="h-48 md:h-64 object-contain" />
+      </div>
+
       {/* Projects Section - Made Responsive */}
       <section id="projects" className="py-8 md:py-16 px-4 relative">
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
@@ -171,7 +177,7 @@ export default function AnimationStudio() {
             src={tomato}
             alt="Tomato artwork"
             loading="lazy"
-            className="hidden lg:block absolute w-48 sm:w-56 md:w-72 lg:w-80 xl:w-96 object-contain rotate-6 z-20 opacity-90"
+            className="absolute w-48 sm:w-56 md:w-72 lg:w-80 xl:w-96 object-contain rotate-6 z-20 opacity-90"
             style={{
               top: 'calc(clamp(-6rem, -15vw, -10rem) - 125px)',
               right: 'clamp(-4rem, -10vw, -15rem)'
