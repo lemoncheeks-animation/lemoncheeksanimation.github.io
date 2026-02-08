@@ -258,12 +258,12 @@ export default function AnimationStudio() {
       </section>
 
       {/* Characters image between Our Team and Contact */}
-      <div className="flex justify-center -my-16 md:-my-24">
+      <div className="flex justify-center -my-[41px] md:-my-[81px]">
         <img
           src={characters}
           alt="Character artwork"
           loading="lazy"
-          className="w-64 sm:w-80 md:w-96 lg:w-[28rem] object-contain opacity-90 transition-transform duration-300 hover:rotate-6"
+          className="w-96 sm:w-[28rem] md:w-[32rem] lg:w-[40rem] object-contain opacity-90 transition-transform duration-300 hover:rotate-6"
         />
       </div>
 
