@@ -40,7 +40,7 @@ export default function AnimationStudio() {
           backgroundImage: `url(${border})`,
           backgroundSize: 'max(100vw, 100vh * 0.9) auto',
           backgroundPosition: 'left top',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'repeat-y'
         }}
       />
       {/* Right border - from top to bottom */}
@@ -50,7 +50,7 @@ export default function AnimationStudio() {
           backgroundImage: `url(${border})`,
           backgroundSize: 'max(100vw, 100vh * 0.9) auto',
           backgroundPosition: 'right top',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'repeat-y'
         }}
       />
       
@@ -177,11 +177,7 @@ export default function AnimationStudio() {
             src={tomato}
             alt="Tomato artwork"
             loading="lazy"
-            className="absolute w-48 sm:w-56 md:w-72 lg:w-80 xl:w-96 object-contain rotate-6 z-20 opacity-90"
-            style={{
-              top: 'calc(clamp(-6rem, -15vw, -10rem) - 125px)',
-              right: 'clamp(-4rem, -10vw, -15rem)'
-            }}
+            className="absolute w-48 sm:w-56 md:w-72 lg:w-80 xl:w-96 object-contain rotate-6 z-20 opacity-90 tomato-position"
           />
           
           {/* Project Card */}

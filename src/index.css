@@ -16,3 +16,16 @@ body, p {
 .font-lexend {
   font-family: 'Lexend', sans-serif;
 }
+
+.tomato-position {
+  top: calc(clamp(-6rem, -15vw, -10rem) - 125px);
+  right: clamp(-4rem, -10vw, -15rem);
+}
+
+/* Small screens only (below sm breakpoint 640px) */
+@media (max-width: 1023px) {
+  .tomato-position {
+    top: calc(clamp(-6rem, -15vw, -10rem) - 20px);
+    right: calc(clamp(-2rem, -8vw, -12rem) + 20px);
+  }
+}
