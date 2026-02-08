@@ -127,7 +127,7 @@ export default function AnimationStudio() {
       {/* About Section - Made Responsive */}
       <section id="about" className="py-8 md:py-16 px-4 relative">
         <div className="flex justify-center mb-4 md:mb-6">
-          <img src={logo} alt="lemoncheeks logo" className="h-16 md:h-24 object-contain relative z-10 transition-transform duration-300 hover:rotate-12" />
+          <img src={logo} alt="lemoncheeks logo" loading="lazy" className="h-16 md:h-24 object-contain relative z-10 transition-transform duration-300 hover:rotate-12" />
         </div>
         <div className="flex justify-center relative z-10 w-full max-w-4xl mx-auto">
           {/* Layer 1 (background paper, slightly rotated) */}
@@ -170,6 +170,7 @@ export default function AnimationStudio() {
           <img
             src={tomato}
             alt="Tomato artwork"
+            loading="lazy"
             className="hidden lg:block absolute w-48 sm:w-56 md:w-72 lg:w-80 xl:w-96 object-contain rotate-6 z-20 opacity-90"
             style={{
               top: 'calc(clamp(-6rem, -15vw, -10rem) - 125px)',
@@ -180,10 +181,11 @@ export default function AnimationStudio() {
           {/* Project Card */}
           <div className="relative bg-gradient-to-br from-pink-50/60 to-red-50/60 border-2 md:border-4 border-pink-200/50 shadow-xl rounded-lg overflow-hidden z-10 w-full" style={textureStyle}>
             {/* Large artwork placeholder for project image/scene */}
-            <img 
-              src={project_artwork} 
-              alt="Decorative frame" 
-              className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl mt-4 sm:mt-6 md:mt-8 mb-2 sm:mb-3 md:mb-4" 
+            <img
+              src={project_artwork}
+              alt="Decorative frame"
+              loading="lazy"
+              className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl mt-4 sm:mt-6 md:mt-8 mb-2 sm:mb-3 md:mb-4"
             />
             <div className="p-6 sm:p-8 md:p-10 lg:p-12 relative">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-pink-900/70 font-josefin-sans" style={{
@@ -229,9 +231,9 @@ export default function AnimationStudio() {
             <div className="relative bg-gradient-to-br from-yellow-50/60 to-orange-50/60 border-2 md:border-4 border-orange-200/50 shadow-xl p-6 sm:p-8 md:p-10 lg:p-12 w-full flex flex-col lg:flex-row items-center lg:items-start gap-6 md:gap-8 rounded-lg z-10" style={textureStyle}>
               {/* Picture Left */}
               <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start flex-shrink-0">
-                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-56 sm:h-64 md:h-80 lg:h-96 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group" title="Team photos" style={{...textureStyle, border: '8px solid transparent', borderImageSlice: '8 fill', borderImageRepeat: 'stretch'}}>
-                  <img src={team_photo1} alt="Team" className="absolute inset-0 w-full h-full object-cover" />
-                  <img src={team_photo2} alt="Team" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
+                <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-56 sm:h-64 md:h-80 lg:h-96 shadow-lg transform rotate-3 bg-red-100/50 flex flex-col items-center justify-center group"style={{...textureStyle, border: '8px solid transparent', borderImageSlice: '8 fill', borderImageRepeat: 'stretch'}}>
+                  <img src={team_photo1} alt="Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                  <img src={team_photo2} alt="Team" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100" />
                 </div>
               </div>
               {/* Words Right */}
@@ -241,10 +243,11 @@ export default function AnimationStudio() {
                   We're Jackie, Frank, and Lauren, 3 California based artists (hello from SF and LA!) 
                   Our final secret member is Freddy the cat. He has bad teeth but he's still giving you a smile:) 
                 </p>
-                <img 
-                  src={freddy} 
-                  alt="freddy" 
-                  className="w-20 sm:w-24 md:w-28 lg:w-32 absolute -bottom-34 sm:-bottom-32 md:-bottom-40 lg:-bottom-60 right-2 md:right-3" 
+                <img
+                  src={freddy}
+                  alt="freddy"
+                  loading="lazy"
+                  className="w-20 sm:w-24 md:w-28 lg:w-32 absolute -bottom-[140px] sm:-bottom-[132px] md:-bottom-[172px] lg:-bottom-[268px] right-2 md:right-3" 
                 />
               </div>
             </div>
@@ -257,6 +260,7 @@ export default function AnimationStudio() {
         <img
           src={characters}
           alt="Character artwork"
+          loading="lazy"
           className="w-64 sm:w-80 md:w-96 lg:w-[28rem] object-contain opacity-90 transition-transform duration-300 hover:rotate-6"
         />
       </div>
