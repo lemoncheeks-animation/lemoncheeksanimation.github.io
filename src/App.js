@@ -35,7 +35,7 @@ export default function AnimationStudio() {
       {/* Responsive Border Frame */}
       {/* Left border - from top to bottom */}
       <div
-        className="fixed top-0 bottom-0 left-0 w-[54px] lg:w-[69px] xl:w-[84px] 2xl:w-[99px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 bottom-0 left-0 w-[47px] lg:w-[74px] xl:w-[89px] 2xl:w-[104px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
           backgroundSize: 'max(100vw, 100vh * 0.9) auto',
@@ -45,7 +45,7 @@ export default function AnimationStudio() {
       />
       {/* Right border - from top to bottom */}
       <div
-        className="fixed top-0 bottom-0 right-0 w-[54px] lg:w-[69px] xl:w-[84px] 2xl:w-[99px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 bottom-0 right-0 w-[47px] lg:w-[74px] xl:w-[89px] 2xl:w-[104px] pointer-events-none z-30 hidden md:block"
         style={{
           backgroundImage: `url(${border})`,
           backgroundSize: 'max(100vw, 100vh * 0.9) auto',

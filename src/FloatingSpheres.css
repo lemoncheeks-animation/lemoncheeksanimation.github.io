@@ -1,8 +1,8 @@
 .sphere-container {
   position: fixed;
   top: 69px;
-  left: 54px;
-  right: 54px;
+  left: 47px;
+  right: 47px;
   bottom: 0;
   overflow: hidden;
   z-index: 10;
@@ -16,8 +16,8 @@
 @media (min-width: 1024px) {
   .sphere-container {
     top: 84px;
-    left: 69px;
-    right: 69px;
+    left: 74px;
+    right: 74px;
   }
 }
 
@@ -25,8 +25,8 @@
 @media (min-width: 1280px) {
   .sphere-container {
     top: 99px;
-    left: 84px;
-    right: 84px;
+    left: 89px;
+    right: 89px;
   }
 }
 
@@ -34,8 +34,8 @@
 @media (min-width: 1536px) {
   .sphere-container {
     top: 114px;
-    left: 99px;
-    right: 99px;
+    left: 104px;
+    right: 104px;
   }
 }
 
