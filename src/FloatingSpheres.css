@@ -1,8 +1,8 @@
 .sphere-container {
   position: fixed;
-  top: 69px;
-  left: 47px;
-  right: 47px;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
   overflow: hidden;
   z-index: 10;
@@ -10,6 +10,15 @@
   transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+/* md breakpoint (768px) */
+@media (min-width: 768px) {
+  .sphere-container {
+    top: 69px;
+    left: 47px;
+    right: 47px;
+  }
 }
 
 /* lg breakpoint (1024px) */
