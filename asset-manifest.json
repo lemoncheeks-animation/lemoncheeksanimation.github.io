@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ce72540.css",
-    "main.js": "/static/js/main.3d77fc8e.js",
+    "main.css": "/static/css/main.ef6d7341.css",
+    "main.js": "/static/js/main.7a5039eb.js",
     "static/js/453.65cb5e68.chunk.js": "/static/js/453.65cb5e68.chunk.js",
     "static/media/style_frame.png": "/static/media/style_frame.a7e6499303f03cadc5ac.png",
     "static/media/characters.png": "/static/media/characters.89f2ae268f5eb9247e5b.png",
-    "static/media/team_photo2.jpg": "/static/media/team_photo2.0583473224a711d5bab4.jpg",
-    "static/media/team_photo1.jpg": "/static/media/team_photo1.822539ba69d812160663.jpg",
-    "static/media/freddy.png": "/static/media/freddy.c57d6973022ec77fa544.png",
+    "static/media/tomato.png": "/static/media/tomato.44e301ad1bbeda463cf1.png",
     "static/media/border2.jpg": "/static/media/border2.f1964377c7cfb77d601d.jpg",
+    "static/media/poppy.png": "/static/media/poppy.14313a48caa6d41f97fc.png",
+    "static/media/team_photo2.jpg": "/static/media/team_photo2.11fc4afd2b261d4cd049.jpg",
+    "static/media/team_photo1.jpg": "/static/media/team_photo1.707dc96f495c14395f93.jpg",
     "static/media/project_photo.jpg": "/static/media/project_photo.867638b16efa7863d00c.jpg",
+    "static/media/logo.png": "/static/media/logo.882cad324229f7568402.png",
+    "static/media/freddy.png": "/static/media/freddy.233d46961969cbd8e1a9.png",
     "index.html": "/index.html",
-    "main.5ce72540.css.map": "/static/css/main.5ce72540.css.map",
-    "main.3d77fc8e.js.map": "/static/js/main.3d77fc8e.js.map",
+    "main.ef6d7341.css.map": "/static/css/main.ef6d7341.css.map",
+    "main.7a5039eb.js.map": "/static/js/main.7a5039eb.js.map",
     "453.65cb5e68.chunk.js.map": "/static/js/453.65cb5e68.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ce72540.css",
-    "static/js/main.3d77fc8e.js"
+    "static/css/main.ef6d7341.css",
+    "static/js/main.7a5039eb.js"
   ]
 }
