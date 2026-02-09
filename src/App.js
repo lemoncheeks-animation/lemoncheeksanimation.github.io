@@ -35,20 +35,22 @@ export default function AnimationStudio() {
       {/* Responsive Border Frame */}
       {/* Left border - from top to bottom */}
       <div
-        className="fixed top-0 bottom-0 left-0 w-[47px] lg:w-[74px] xl:w-[89px] 2xl:w-[104px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 bottom-0 left-0 pointer-events-none z-30 hidden md:block"
         style={{
+          width: 'max(calc(5.8vw - 10px), 35px)',
           backgroundImage: `url(${border})`,
-          backgroundSize: 'max(100vw, 100vh * 0.9) auto',
+          backgroundSize: '1720% auto',
           backgroundPosition: 'left top',
           backgroundRepeat: 'repeat-y'
         }}
       />
       {/* Right border - from top to bottom */}
       <div
-        className="fixed top-0 bottom-0 right-0 w-[47px] lg:w-[74px] xl:w-[89px] 2xl:w-[104px] pointer-events-none z-30 hidden md:block"
+        className="fixed top-0 bottom-0 right-0 pointer-events-none z-30 hidden md:block"
         style={{
+          width: 'max(calc(5.8vw - 10px), 35px)',
           backgroundImage: `url(${border})`,
-          backgroundSize: 'max(100vw, 100vh * 0.9) auto',
+          backgroundSize: '1720% auto',
           backgroundPosition: 'right top',
           backgroundRepeat: 'repeat-y'
         }}

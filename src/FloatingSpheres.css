@@ -12,41 +12,6 @@
   backface-visibility: hidden;
 }
 
-/* md breakpoint (768px) */
-@media (min-width: 768px) {
-  .sphere-container {
-    top: 69px;
-    left: 47px;
-    right: 47px;
-  }
-}
-
-/* lg breakpoint (1024px) */
-@media (min-width: 1024px) {
-  .sphere-container {
-    top: 84px;
-    left: 74px;
-    right: 74px;
-  }
-}
-
-/* xl breakpoint (1280px) */
-@media (min-width: 1280px) {
-  .sphere-container {
-    top: 99px;
-    left: 89px;
-    right: 89px;
-  }
-}
-
-/* 2xl breakpoint (1536px) */
-@media (min-width: 1536px) {
-  .sphere-container {
-    top: 114px;
-    left: 104px;
-    right: 104px;
-  }
-}
 
 .sphere {
   position: absolute;
