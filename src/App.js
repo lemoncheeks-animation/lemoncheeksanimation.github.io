@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Menu, X, Film, Instagram, Linkedin } from 'lucide-react';
 import FloatingSpheres from './FloatingSpheres';
-import border from './media/border2.jpg';
-import team_photo1 from './media/team_photo1.jpg';
-import team_photo2 from './media/team_photo2.jpg';
-import freddy from './media/freddy.png';
-import style_frame from './media/style_frame.png';
-import project_artwork from './media/project_photo.jpg';
-import characters from './media/characters.png';
-import tomato from './media/tomato.png';
-import logo from './media/logo.png';
-import poppy from './media/poppy.png';
+import border from './media/border2.webp';
+import team_photo1 from './media/team_photo1.webp';
+import team_photo2 from './media/team_photo2.webp';
+import freddy from './media/freddy.webp';
+import style_frame from './media/style_frame.webp';
+import project_artwork from './media/project_photo.webp';
+import characters from './media/characters.webp';
+import tomato from './media/tomato.webp';
+import logo from './media/logo.webp';
+import poppy from './media/poppy.webp';
 
 export default function AnimationStudio() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -124,7 +124,7 @@ export default function AnimationStudio() {
         {/* Layer 5 (top-most paper layer) */}
         <div className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[99%] h-[60vh] md:h-[90vh] max-h-[600px] min-[1700px]:max-h-[750px] bg-yellow-100/70 rounded-lg transform rotate-2 shadow-xl z-0" style={textureStyle}></div>
 
-        <img src={style_frame} alt="Decorative frame" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full min-[1700px]:max-w-7xl mt-4 md:mt-8 min-[1700px]:mt-12 mb-2 md:mb-4" />
+        <img src={style_frame} alt="Decorative frame" loading="lazy" className="relative z-10 block w-full h-auto object-contain mx-auto max-w-full min-[1700px]:max-w-7xl mt-4 md:mt-8 min-[1700px]:mt-12 mb-2 md:mb-4" />
       </section>
 
       {/* About Section - Made Responsive */}
