@@ -148,12 +148,12 @@ export default function AnimationStudio() {
             <div className="space-y-3 md:space-y-4 text-base sm:text-lg text-orange-800/70 leading-relaxed font-lexend">
               <p>
                 Welcome! Lemoncheeks Animation Cooperative is a worker cooperative, 
-                with a mission to tell inclusive, original stories through animation. 
+                with a mission to tell original stories through animation. 
                 We are collectively owned and governed, grounded in equity, inclusion, and care.
               </p>
               <p>
                 We believe animation can be a powerful way to amplify underrepresented voices. As a cooperative
-                rooted in bicultural perspectives, we want to create work that reflects the richness of our communities
+                rooted in bicultural perspectives, we want to create work that reflects and honors the richness of our communities
                 and experiences. 
               </p>
             </div>
@@ -199,12 +199,13 @@ export default function AnimationStudio() {
               <div className="w-full">
                 <p className="text-base sm:text-lg text-pink-900/70 leading-relaxed mb-4 md:mb-6 font-nunito">
                   Our animated short film is currently in production! 
-
-                  Our story will explore the small, tender complexities of bicultural identity and
+                </p>
+                <p className="text-base sm:text-lg text-pink-900/70 leading-relaxed mb-4 md:mb-6 font-nunito">
+                  This story will explore the small, tender complexities of bicultural identity and
                   intergenerational love between parent and child.
                 </p>
                 <p className="text-base sm:text-lg text-pink-900/70 leading-relaxed mb-4 md:mb-6 font-nunito">
-                  This short explores questions like - 
+                  Our short explores questions like -
                   What does it mean to grow up in two cultures at once? 
                   How do both love and misunderstanding 
                   coexist between an immigrant parent and their child? 
