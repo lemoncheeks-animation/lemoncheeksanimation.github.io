@@ -251,7 +251,7 @@ export default function AnimationStudio() {
                   src={freddy}
                   alt="freddy"
                   loading="lazy"
-                  className="w-20 sm:w-24 md:w-28 lg:w-32 absolute -bottom-[140px] sm:-bottom-[132px] md:-bottom-[172px] lg:-bottom-[268px] right-2 md:right-3" 
+                  className="w-20 sm:w-24 md:w-28 lg:w-32 absolute -bottom-[145px] sm:-bottom-[132px] md:-bottom-[172px] lg:-bottom-[268px] -right-6 sm:right-2 md:right-3"
                 />
               </div>
             </div>
